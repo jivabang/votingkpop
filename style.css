@@ -77,13 +77,13 @@ h1 {
     background-color: #177a63;
 }
 
-.form-container, .collab-form-container {
+.form-container, .collab-form-container, .comments-container {
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #eee;
 }
 
-.form-container h2, .collab-form-container h2 {
+.form-container h2, .collab-form-container h2, .comments-container h2 {
     font-size: 1.2em;
     color: #1d8f77;
 }
@@ -124,4 +124,3 @@ textarea {
     width: auto;
     padding: 9px 15px;
 }
-
