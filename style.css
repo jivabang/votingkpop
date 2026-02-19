@@ -1,126 +1,63 @@
 body {
     font-family: sans-serif;
-    background-color: #f0f2f5;
+    background-color: #f0f8ff;
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
-    padding: 20px;
 }
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 600px;
 }
 
 h1 {
-    text-align: center;
-    color: #1d8f77;
+    color: #007bff;
 }
 
-#poll-options {
-    margin-top: 20px;
+#quiz-container {
+    text-align: left;
+    margin-top: 2rem;
 }
 
-.poll-option {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
+.question {
+    margin-bottom: 1.5rem;
 }
 
-.rank {
-    font-size: 1.2em;
+.question p {
     font-weight: bold;
-    color: #1d8f77;
-    margin-right: 15px;
+    margin-bottom: 0.5rem;
 }
 
-.idol-info {
-    flex-grow: 1;
-}
-
-.idol-name {
-    font-weight: bold;
-}
-
-.idol-group {
-    color: #666;
-    font-size: 0.9em;
-    margin-left: 5px;
-}
-
-.vote-section {
+.options {
     display: flex;
-    align-items: center;
+    justify-content: space-around;
 }
 
-.votes {
-    font-size: 1.1em;
-    margin-right: 10px;
-}
-
-.vote-btn {
-    background-color: #1d8f77;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.vote-btn:hover {
-    background-color: #177a63;
-}
-
-.form-container, .collab-form-container, .comments-container {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-}
-
-.form-container h2, .collab-form-container h2, .comments-container h2 {
-    font-size: 1.2em;
-    color: #1d8f77;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box; /* To ensure padding doesn't affect width */
-}
-
-#add-idol, .collab-form-container button {
+button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
-    width: 100%;
+    margin-top: 2rem;
 }
 
-#add-idol:hover, .collab-form-container button:hover {
+button:hover {
     background-color: #0056b3;
 }
 
-/* Adjustments for side-by-side inputs in idol-add form */
-.form-container input[type="text"] {
-    width: calc(50% - 12px);
-    display: inline-block;
-}
-
-.form-container button {
-    width: auto;
-    padding: 9px 15px;
+#result-container {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
