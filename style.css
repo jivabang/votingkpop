@@ -1,234 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
-
-:root {
-  --background-color-light: #f9f9f9;
-  --text-color-light: #333;
-  --header-background-light: linear-gradient(to right, #4169E1, #1E90FF);
-  --header-text-light: #fff;
-  --section-background-light: #fff;
-  --highlight-color-light: #1E90FF;
-  --cta-background-light: linear-gradient(to right, #1E90FF, #4169E1);
-  --cta-text-light: white;
-  --cta-button-background-light: white;
-  --cta-button-text-light: #1E90FF;
-  --footer-background-light: #333;
-  --footer-text-light: #fff;
-
-  --background-color-dark: #121212;
-  --text-color-dark: #e0e0e0;
-  --header-background-dark: linear-gradient(to right, #333, #444);
-  --header-text-dark: #fff;
-  --section-background-dark: #1e1e1e;
-  --highlight-color-dark: #1E90FF;
-  --cta-background-dark: linear-gradient(to right, #444, #333);
-  --cta-text-dark: white;
-  --cta-button-background-dark: #1E90FF;
-  --cta-button-text-dark: white;
-  --footer-background-dark: #1e1e1e;
-  --footer-text-dark: #e0e0e0;
-}
-
 body {
-  font-family: 'Noto Sans KR', sans-serif;
-  margin: 0;
-  background-color: var(--background-color-light);
-  color: var(--text-color-light);
-  line-height: 1.6;
-}
-
-body.dark-mode {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-}
-
-header {
-  background: var(--header-background-light);
-  color: var(--header-text-light);
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
-body.dark-mode header {
-  background: var(--header-background-dark);
-  color: var(--header-text-dark);
-}
-
-
-header h1 {
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
     margin: 0;
-    font-size: 2.5rem;
+    padding: 20px;
 }
 
-main {
-  padding: 20px;
-}
-
-.highlight {
-    color: var(--highlight-color-light);
-}
-
-body.dark-mode .highlight {
-    color: var(--highlight-color-dark);
-}
-
-.introduction, .features, .cta, .instructors, .contact {
-  background-color: var(--section-background-light);
-  padding: 2rem;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-body.dark-mode .introduction, body.dark-mode .features, body.dark-mode .cta, body.dark-mode .instructors, body.dark-mode .contact {
-  background-color: var(--section-background-dark);
-}
-
-.instructors h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.instructor-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.instructor {
-    text-align: center;
-}
-
-.instructor img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-
-.features ul {
-  list-style: none;
-  padding: 0;
-}
-
-.features li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.check {
-    color: var(--highlight-color-light);
-    font-size: 1.2rem;
-    margin-right: 10px;
-}
-
-body.dark-mode .check {
-    color: var(--highlight-color-dark);
-}
-
-.cta {
-  text-align: center;
-  background: var(--cta-background-light);
-  color: var(--cta-text-light);
-}
-
-body.dark-mode .cta {
-  background: var(--cta-background-dark);
-  color: var(--cta-text-dark);
-}
-
-.cta h2 {
-    margin: 0 0 1rem 0;
-}
-
-.cta button {
-  background-color: var(--cta-button-background-light);
-  color: var(--cta-button-text-light);
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: bold;
-  transition: transform 0.2s;
-}
-
-body.dark-mode .cta button {
-  background-color: var(--cta-button-background-dark);
-  color: var(--cta-button-text-dark);
-}
-
-.cta button:hover {
-    transform: scale(1.05);
-}
-
-footer {
-  background-color: var(--footer-background-light);
-  color: var(--footer-text-light);
-  padding: 1rem;
-  text-align: center;
-  margin-top: 2rem; 
-}
-
-body.dark-mode footer {
-  background-color: var(--footer-background-dark);
-  color: var(--footer-text-dark);
-}
-
-/* Contact Form Styles */
-.contact h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
+.container {
     max-width: 600px;
     margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.contact label {
-    margin-bottom: 0.5rem;
+h1 {
+    text-align: center;
+    color: #1d8f77;
+}
+
+#poll-options {
+    margin-top: 20px;
+}
+
+.poll-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.rank {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1d8f77;
+    margin-right: 15px;
+}
+
+.idol-info {
+    flex-grow: 1;
+}
+
+.idol-name {
     font-weight: bold;
 }
 
-.contact input,
-.contact textarea {
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
+.idol-group {
+    color: #666;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+.vote-section {
+    display: flex;
+    align-items: center;
+}
+
+.votes {
+    font-size: 1.1em;
+    margin-right: 10px;
+}
+
+.vote-btn {
+    background-color: #1d8f77;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.vote-btn:hover {
+    background-color: #177a63;
+}
+
+.form-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.form-container h2 {
+    font-size: 1.2em;
+    color: #1d8f77;
+}
+
+input[type="text"] {
+    width: calc(50% - 12px);
+    padding: 8px;
+    margin-right: 10px;
     border: 1px solid #ddd;
-    font-size: 1rem;
-    font-family: 'Noto Sans KR', sans-serif;
+    border-radius: 4px;
 }
 
-body.dark-mode .contact input,
-body.dark-mode .contact textarea {
-    background-color: #333;
-    color: #e0e0e0;
-    border-color: #555;
+#add-idol {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.contact button {
-  background: var(--cta-background-light);
-  color: var(--cta-text-light);
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: bold;
-  transition: transform 0.2s;
-  align-self: center; /* Center the button */
-}
-
-body.dark-mode .contact button {
-  background: var(--cta-background-dark);
-  color: var(--cta-text-dark);
-}
-
-.contact button:hover {
-    transform: scale(1.05);
+#add-idol:hover {
+    background-color: #0056b3;
 }
