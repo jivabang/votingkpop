@@ -77,34 +77,51 @@ h1 {
     background-color: #177a63;
 }
 
-.form-container {
+.form-container, .collab-form-container {
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #eee;
 }
 
-.form-container h2 {
+.form-container h2, .collab-form-container h2 {
     font-size: 1.2em;
     color: #1d8f77;
 }
 
-input[type="text"] {
-    width: calc(50% - 12px);
-    padding: 8px;
-    margin-right: 10px;
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    box-sizing: border-box; /* To ensure padding doesn't affect width */
 }
 
-#add-idol {
+#add-idol, .collab-form-container button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 9px 15px;
+    padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%;
 }
 
-#add-idol:hover {
+#add-idol:hover, .collab-form-container button:hover {
     background-color: #0056b3;
 }
+
+/* Adjustments for side-by-side inputs in idol-add form */
+.form-container input[type="text"] {
+    width: calc(50% - 12px);
+    display: inline-block;
+}
+
+.form-container button {
+    width: auto;
+    padding: 9px 15px;
+}
+

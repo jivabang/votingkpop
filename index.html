@@ -17,6 +17,18 @@
             <input type="text" id="idol-group" placeholder="그룹 이름">
             <button id="add-idol">추가</button>
         </div>
+
+        <div class="collab-form-container">
+            <h2>기업 제휴 문의</h2>
+            <form id="collab-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="text" name="company" placeholder="회사명" required>
+                <input type="text" name="name" placeholder="담당자 이름" required>
+                <input type="email" name="email" placeholder="이메일 주소" required>
+                <input type="tel" name="phone" placeholder="연락처">
+                <textarea name="message" placeholder="문의 내용" rows="5" required></textarea>
+                <button type="submit">보내기</button>
+            </form>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>
