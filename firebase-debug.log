@@ -1,449 +1,117 @@
-[debug] [2026-02-19T10:52:30.401Z] ----------------------------------------------------------------------
-[debug] [2026-02-19T10:52:30.403Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/gm9mcvzb17vv8cla08khrg29vxn3sq4r-firebase-tools-15.1.0/lib/node_modules/firebase-tools/lib/bin/firebase.js deploy --only hosting --debug
-[debug] [2026-02-19T10:52:30.403Z] CLI Version:   15.1.0
-[debug] [2026-02-19T10:52:30.403Z] Platform:      linux
-[debug] [2026-02-19T10:52:30.403Z] Node Version:  v20.19.1
-[debug] [2026-02-19T10:52:30.404Z] Time:          Thu Feb 19 2026 10:52:30 GMT+0000 (Coordinated Universal Time)
-[debug] [2026-02-19T10:52:30.404Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2026-02-19T10:52:31.901Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:31.903Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:31.906Z] >>> [apiv2][query] GET https://monospace-pa.googleapis.com/v1/workspaces/jivabang-62445779 [none]
-[debug] [2026-02-19T10:52:32.780Z] <<< [apiv2][status] GET https://monospace-pa.googleapis.com/v1/workspaces/jivabang-62445779 200
-[debug] [2026-02-19T10:52:32.781Z] <<< [apiv2][body] GET https://monospace-pa.googleapis.com/v1/workspaces/jivabang-62445779 {"workspaceId":"jivabang-62445779","name":"jivabang","workspaceRedirectUrl":"firebase-jivabang-1771386695570.cluster-ys234awlzbhwoxmkkse6qo3fz6.cloudworkstations.dev","status":"WORKSPACE_STATUS_RUNNING","lastAccessDatetime":"2026-02-19T10:21:26.157940Z","workspaceTemplate":"WORKSPACE_TEMPLATE_BLANK_WEB","owner":"SELF","serviceAccountEmail":"msp-5621923658199285182@monospace-2.iam.gserviceaccount.com","enableNix":true,"ownerEmail":"lhycpa77@gmail.com","workspaceImageUrl":"https://www.gstatic.com/monospace/231115/logo_html.svg","templateArgs":"{\"__agentic_workspace\":true}","templateRepoUrl":"file:///usr/local/monospace/templates/public/blank-web","workstationAccessToken":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkLmdvb2dsZS5jb20vd29ya3N0YXRpb25zIiwiYXVkIjoiZmlyZWJhc2Utaml2YWJhbmctMTc3MTM4NjY5NTU3MC5jbHVzdGVyLXlzMjM0YXdsemJod294bWtrc2U2cW8zZno2LmNsb3Vkd29ya3N0YXRpb25zLmRldiIsImlhdCI6MTc3MTQ5ODM1MiwiZXhwIjoxNzcxNTg0NzUyfQ.Gf0ViBQDmACpzKg2YXfJHd538jiP1o70hKcvPrdxK1WF-1_Kj6f2ijhDYvgXiMwkXBh2F8OkO7qkTEGWTx9XCvaC53y2w85lkd1od0I5m1dPRkHw9YtP5tVFp9moNcQmc7eebP3BOyvqIm0ybdf2McXV2rkiE3WbcqTZK3e8b2B_syqMASaTrvN9LzQHbXXSYyUhalIrOnHLPqp9bz7u5YP6MNEOCMYPycxoBs5UsMf_GXFs9Fgcif40oBnwKihX-Updl_vy-1ce0dVXac9FQGqTj72H_pz2FtiUos7S8jFbJCf-KuNOIJfNYtfIimFMOtt8r5h6EZbXWQ99l2sECA"}
-[info] Updating Studio Workspace active project to match Firebase CLI 'kpopvoting'
-[debug] [2026-02-19T10:52:32.782Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:32.782Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:32.783Z] >>> [apiv2][query] PATCH https://monospace-pa.googleapis.com/v1/workspaces/jivabang-62445779 updateMask=workspace.firebaseProjectId
-[debug] [2026-02-19T10:52:32.783Z] >>> [apiv2][body] PATCH https://monospace-pa.googleapis.com/v1/workspaces/jivabang-62445779 {"firebaseProjectId":"kpopvoting"}
-[debug] [2026-02-19T10:52:34.066Z] <<< [apiv2][status] PATCH https://monospace-pa.googleapis.com/v1/workspaces/jivabang-62445779 200
-[debug] [2026-02-19T10:52:34.066Z] <<< [apiv2][body] PATCH https://monospace-pa.googleapis.com/v1/workspaces/jivabang-62445779 {"workspaceId":"jivabang-62445779","name":"jivabang","workspaceRedirectUrl":"firebase-jivabang-1771386695570.cluster-ys234awlzbhwoxmkkse6qo3fz6.cloudworkstations.dev","status":"WORKSPACE_STATUS_RUNNING","lastAccessDatetime":"2026-02-19T10:21:26.157940Z","workspaceTemplate":"WORKSPACE_TEMPLATE_BLANK_WEB","serviceAccountEmail":"msp-5621923658199285182@monospace-2.iam.gserviceaccount.com","enableNix":true,"workspaceImageUrl":"https://www.gstatic.com/monospace/231115/logo_html.svg","templateArgs":"{\"__agentic_workspace\":true}","templateRepoUrl":"file:///usr/local/monospace/templates/public/blank-web","firebaseProjectId":"kpopvoting"}
-[debug] [2026-02-19T10:52:34.077Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
-[debug] [2026-02-19T10:52:34.078Z] > authorizing via signed-in user (lhycpa77@gmail.com)
-[debug] [2026-02-19T10:52:34.078Z] [iam] checking project kpopvoting for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2026-02-19T10:52:34.079Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:34.080Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:34.080Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/kpopvoting:testIamPermissions [none]
-[debug] [2026-02-19T10:52:34.080Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/kpopvoting:testIamPermissions x-goog-quota-user=projects/kpopvoting
-[debug] [2026-02-19T10:52:34.080Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/kpopvoting:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2026-02-19T10:52:34.844Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/kpopvoting:testIamPermissions 200
-[debug] [2026-02-19T10:52:34.845Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/kpopvoting:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2026-02-19T10:52:34.846Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:34.846Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:34.846Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/kpopvoting [none]
-[debug] [2026-02-19T10:52:35.091Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/kpopvoting 200
-[debug] [2026-02-19T10:52:35.091Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/kpopvoting {"projectId":"kpopvoting","projectNumber":"672495567896","displayName":"kpopvoting","name":"projects/kpopvoting","resources":{"hostingSite":"kpopvoting"},"state":"ACTIVE","etag":"1_28b7e646-88a1-4877-aec9-a670016fda68"}
-[info] 
-[info] === Deploying to 'kpopvoting'...
-[info] 
-[info] i  deploying hosting 
-[debug] [2026-02-19T10:52:35.099Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:35.100Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:35.100Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kpopvoting/versions [none]
-[debug] [2026-02-19T10:52:35.100Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kpopvoting/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase--project-idx"}}
-[debug] [2026-02-19T10:52:38.178Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kpopvoting/versions 200
-[debug] [2026-02-19T10:52:38.179Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kpopvoting/versions {"name":"projects/672495567896/sites/kpopvoting/versions/0e4bb90104d1e8eb","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase--project-idx"}}
-[info] i  hosting[kpopvoting]: beginning deploy... 
-[info] i  hosting[kpopvoting]: found 59 files in . 
-[debug] [2026-02-19T10:52:38.257Z] [hosting] uploading with 200 concurrency
-[debug] [2026-02-19T10:52:38.260Z] [hosting] hash cache [] not populated
-[debug] [2026-02-19T10:52:38.371Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:38.376Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:38.380Z] [hosting] hash cache [] stored for 59 files
-[debug] [2026-02-19T10:52:38.381Z] [hosting][hash queue][FINAL] {"max":96,"min":16,"avg":75.11864406779661,"active":0,"complete":59,"success":59,"errored":0,"retried":0,"total":59,"elapsed":120}
-[debug] [2026-02-19T10:52:38.385Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/672495567896/sites/kpopvoting/versions/0e4bb90104d1e8eb:populateFiles [none]
-[debug] [2026-02-19T10:52:38.387Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/672495567896/sites/kpopvoting/versions/0e4bb90104d1e8eb:populateFiles {"files":{"/style.css":"9e1f5e25c0f87b9741123a8c67a36212ff7168b788a7ab1e7ddb0defe521bec6","/index.html":"af09c221e96fb14d5fe6158c4f0c93c747dd8705b8ac9f732a65b17848753ace","/.vscode/settings.json":"1b86067082ee76941db81589d2b933689e33dade009a7024790f0effb9f11b07","/.idx/mcp.json":"1733e9925a6db4491601f8d9e0aaf0108aa133268a5369768fe7dedbb4d60e77","/.idx/dev.nix":"b8717f3d1ff965bb80c4b7cfbd9ab3c54542a81f6ff02ca3ca2925bcace0fbdb","/main.js":"f4ab991a3cfe04a6e987fed4ea561cb55a4c7da0a8c7e747a73ddc8df3367e20","/.git/config":"ec4d0af46989b1552c3974bce7001f6bc62f9e5cc6e193ad4d582ce10313532f","/.git/HEAD":"58766951e606b2022f59cd9f29b2917abd798a925686f219a831c72d3b896199","/.git/COMMIT_EDITMSG":"b5297843c186cb0c99102c6052ee3ba4549b167649437654ad4016b1d703ef86","/.git/refs/remotes/origin/main":"7cd39700b8789c5cb533f52b5ad7fbbea7ba235509261de80445f7979506a1ef","/.git/index":"568dfeb4cb9a65ae3dfe4b7885bdfe9684a68615fee606fec38687f94d5dcddc","/.git/objects/ea/7d922beb68d42248abab9f865c89ed3ff7609c":"3ab705e631bb5c9dc8901fc6c259aee75b1631a97a40e8aab7636520771f441c","/.git/objects/f1/3871b8f0d8d1698de6318523ceee7ebedb2a3b":"21dc9c059ba242edeaa78d2afb48d9addb3644b1997840404f96670bd3e60ff8","/.git/refs/heads/main":"7cd39700b8789c5cb533f52b5ad7fbbea7ba235509261de80445f7979506a1ef","/.git/objects/c8/82504df2ac2d120c267891dc0dc2b1ffcda195":"8b3bd6cf1f5a110bcbefbb7404c415210b29b7b0026ce0b73746a13c5326013c","/.git/objects/c0/e8c2c9311783895a9667db4cd2e5c3d33092a7":"e335fe6ab0596b0dbfd8427d9997dc72ea865c91e9b0fd1eb6b4341f64e3379f","/.git/objects/92/9ad609046aa53fe4932528fdc3e8a4bc8d546c":"8c8a8cb0e8c7a82ecc60388aadba5256fd553336e86360a25970ac8a8af06d66","/.git/objects/92/8b1284e3ed5274b13c76789ff1cb8b5dc4c9ca":"b03dd8a886f8301692e7c610e8faf0958d38139a8b64a308e365576272179622","/.git/objects/80/f4afc836461cbcf721373e4762e9e588645ee9":"fcf4dd7e6f3a969dedb5ac127c2d3e02aa68cd7d5870cedd02de6d4b9794e346","/.git/objects/de/28a7983ea756c7944bbae1b6049ccc9b8d07c9":"6fe2c5d49691758dabc5b939510f3578391da9479b01964ea71f102e5f4dd73c","/.git/objects/5c/c38abb3954f190ae6e2a7bf013a21aa82fcf6f":"5847d72935c723f39cf278ca8ef102f47a093f6898d37dd5372869856dc31f59","/.git/objects/5b/b4b43834a2dbf541fda654455d802ca4a8ba3e":"2a6c2eeee292b27394176eb340913779b33401f4ad673565c1ee6554894d9e3c","/.git/objects/48/0fe1a7490a8a44f64b60fc1ff0bf4d6a43cb9e":"a8f0a14d1369526eb63ccfedbd32266083a044b08900b22b1822584cc7d97808","/.git/objects/d7/08b0baad83b99f44ba98916be4372297fc121d":"433525fc4e72ed85cf2aedcceb3d28845b0a238099893153691ce5ea34253079","/.git/objects/cd/3f69dda2532d2b84ab6ff2735c90789322bcbf":"7286bdc95b963ae3226b7bcf57a3a82697593bdddee14b094493cfd65085d2d6","/.git/objects/7d/aece3219ccac76a10952a8dd8a11a989974fac":"76572a3e9b343cf375c590273c1d852f3eb4c6ba65dec1d54bd9ad70bd3653bc","/.git/objects/3a/902e810813ae1053651fb398dd11b614131c7c":"2396bb25f1f3e513fa4e0353023ae976e0f1621e65a36e91e221b45378b4d9eb","/.git/objects/3e/28db6e9a0c30359a320f1ad8ea814ba7cbe842":"3fac210fea057d39e5ad609440c17f3da0c608be4a8f86804c9dfd917397ad14","/.git/objects/36/b3c46e75e58b04e77c42ae67c78632a7135a59":"5ae684e1532dfc43ed9e71dae2f38b99ca7ea5ceca0f1cbc39d477f1018500e6","/.git/objects/42/6c4581c7c07c1d7c7b74f32c2677af1ac556c7":"e313680357f0b77395ee3b61b4d85bcdfbac045b2f1383a8f3da9d509463ba13","/.git/objects/18/49d40e2a34273262552100bd7978da24bb88cc":"c5f620940ece873384cc5b373530a5b1b200129b040f2d3f3bca280c553646bf","/.git/objects/39/a2eba036cdf9c5eac05d0648fc4554bff1d5c9":"b4daf437d565cf9fd7aec1d4c08cd0b2334ab603742db09d15cb00f5735e56e1","/.git/objects/77/af7ce5d1867dea7e1edc7e065d035ee94d0c3e":"217242871994c00998cf8fa2efd9aab88874330076058ff7944b7479cb8c8c73","/.git/logs/HEAD":"7aab6f0a905363afd09295a22a92dec1aebc1948b793427528163774d7fdcb5e","/.git/logs/refs/remotes/origin/main":"0b48a0f933e61d86840a3fe3c83a71e98303181dd7a59db92334486a8b5b35cf","/.git/objects/2b/7868b781acaa292ff1d98780b99492e8f9930c":"c33867799e285a3e8b4a56319ad9171319e43b5792b73a2f1ba3bf29714fc394","/.git/info/exclude":"6ee9e7fa10a145192315512e5155f85ca9aa7f341386804e737e7101d8c37bd3","/.git/objects/44/37f40db9d37f55b24e8a5be404c8debcf8e9ef":"6924d1f705c5648eb8fcbeb2a7dc1b02e01709a83f969d9fabe6430aa3f8f78a","/.git/hooks/update.sample":"4db93811512da073c93a1d631affccef3e22da7ff9456c9339141ac93a9e5ab6","/.git/objects/04/1117f5f99f0c65be4d861100a337859c99a794":"af4f7632b82ab4b1581f37a51f23bdee09ffff926a93fe132604ef1eab277ef5","/.git/hooks/push-to-checkout.sample":"1c78af2ea894b9172646d50bc56ffeb18ef16aecbb7134be130c96ede53129d8","/.git/objects/53/c6989248db1a3520c13d54c9e2450a4196a453":"e5e47d2f3df36edd25268edf889f0f986b8100fc57fc21b4da1a4a00a3876241","/.git/objects/d0/09c8388cecfbe7820b4d735ff3588b92c6c916":"96a646bc00e1746295c0766c78d62e9cc45e7f3fb04d568a3a13fcb715991c43","/.git/hooks/prepare-commit-msg.sample":"fa9656b545885701042c71bd3b5fcf4e356f525147b79ac07bfea1ccab2a20be","/.git/hooks/pre-receive.sample":"44d69b0a42a718e3d9e76931f4fa18bdb78bf151e0623c7f33a28b9a2f635fc6","/.git/objects/bf/afca24857cd00a3f18dbbde459e4ac8777dd8d":"3c0d48469d4f9d26f414fb241e63e0e870d7d6dd08f48719d522a1918da6b40b","/.git/description":"033b7b2d8c0304f97fae56f0d0bd4019d72b6f6c2d428557b2fe2779ffbe90b3","/.git/logs/refs/heads/main":"7aab6f0a905363afd09295a22a92dec1aebc1948b793427528163774d7fdcb5e","/.git/hooks/sendemail-validate.sample":"a42a03b66628d01e6039f8d9cb23409d5b59f52e9222d4df14f7ec6bc7447ac9","/.git/objects/18/053c4b117c9b8d2b0ef4c519a1639ec97d5675":"d1d31d81f149f6aaccd327ae12fc15006929106f3beea15fa1b0a58279ed0a7a","/.git/hooks/pre-push.sample":"35e6a2432fbb0f76864ba47311046a09bc25853d3520348f4b1027a35fceecbb","/.git/hooks/pre-rebase.sample":"57faea53688177246aa69234c9a9b4817dbc04918d75246e91834c8e6b41946b","/.git/hooks/pre-commit.sample":"25928cf2c53a15860c50990273f119b2e4cfd3ba9228dda7d43f11699765768e","/.git/hooks/pre-merge-commit.sample":"8476d5916f9ccb4b1df347dc415892a1b30624b4a5d4ccf740df38bf2b180536","/.git/hooks/post-update.sample":"9751f4d0061479cbac9eafd582e9e9a9e344add0530d12d4495e54737ff97898","/.git/hooks/pre-applypatch.sample":"4d6f0911886c7769d45815e0a3658d38c93529bda941e9868c8bb2932dbbc896","/.git/hooks/fsmonitor-watchman.sample":"e08fb1ae03b6245f7c1487e8818fcdc5192c215d57781456f09831b0c4e6cb0f","/.git/hooks/applypatch-msg.sample":"da11fbbcab91a13b3e329d99f49b2eef4439074e3a2273abe239d42e80569ab8","/.git/hooks/commit-msg.sample":"03b9f4fe1266e772785234b9268ac49cbd792b5524330e52eb25f6095372fcb7"}}
-[debug] [2026-02-19T10:52:39.319Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/672495567896/sites/kpopvoting/versions/0e4bb90104d1e8eb:populateFiles 200
-[debug] [2026-02-19T10:52:39.320Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/672495567896/sites/kpopvoting/versions/0e4bb90104d1e8eb:populateFiles {"uploadRequiredHashes":["21dc9c059ba242edeaa78d2afb48d9addb3644b1997840404f96670bd3e60ff8","4db93811512da073c93a1d631affccef3e22da7ff9456c9339141ac93a9e5ab6","9751f4d0061479cbac9eafd582e9e9a9e344add0530d12d4495e54737ff97898","c33867799e285a3e8b4a56319ad9171319e43b5792b73a2f1ba3bf29714fc394","8b3bd6cf1f5a110bcbefbb7404c415210b29b7b0026ce0b73746a13c5326013c","a42a03b66628d01e6039f8d9cb23409d5b59f52e9222d4df14f7ec6bc7447ac9","b03dd8a886f8301692e7c610e8faf0958d38139a8b64a308e365576272179622","7286bdc95b963ae3226b7bcf57a3a82697593bdddee14b094493cfd65085d2d6","44d69b0a42a718e3d9e76931f4fa18bdb78bf151e0623c7f33a28b9a2f635fc6","25928cf2c53a15860c50990273f119b2e4cfd3ba9228dda7d43f11699765768e","6924d1f705c5648eb8fcbeb2a7dc1b02e01709a83f969d9fabe6430aa3f8f78a","e08fb1ae03b6245f7c1487e8818fcdc5192c215d57781456f09831b0c4e6cb0f","2a6c2eeee292b27394176eb340913779b33401f4ad673565c1ee6554894d9e3c","58766951e606b2022f59cd9f29b2917abd798a925686f219a831c72d3b896199","2396bb25f1f3e513fa4e0353023ae976e0f1621e65a36e91e221b45378b4d9eb","8c8a8cb0e8c7a82ecc60388aadba5256fd553336e86360a25970ac8a8af06d66","f4ab991a3cfe04a6e987fed4ea561cb55a4c7da0a8c7e747a73ddc8df3367e20","6ee9e7fa10a145192315512e5155f85ca9aa7f341386804e737e7101d8c37bd3","9e1f5e25c0f87b9741123a8c67a36212ff7168b788a7ab1e7ddb0defe521bec6","c5f620940ece873384cc5b373530a5b1b200129b040f2d3f3bca280c553646bf","af09c221e96fb14d5fe6158c4f0c93c747dd8705b8ac9f732a65b17848753ace","fcf4dd7e6f3a969dedb5ac127c2d3e02aa68cd7d5870cedd02de6d4b9794e346","3c0d48469d4f9d26f414fb241e63e0e870d7d6dd08f48719d522a1918da6b40b","1b86067082ee76941db81589d2b933689e33dade009a7024790f0effb9f11b07","033b7b2d8c0304f97fae56f0d0bd4019d72b6f6c2d428557b2fe2779ffbe90b3","d1d31d81f149f6aaccd327ae12fc15006929106f3beea15fa1b0a58279ed0a7a","4d6f0911886c7769d45815e0a3658d38c93529bda941e9868c8bb2932dbbc896","fa9656b545885701042c71bd3b5fcf4e356f525147b79ac07bfea1ccab2a20be","3ab705e631bb5c9dc8901fc6c259aee75b1631a97a40e8aab7636520771f441c","ec4d0af46989b1552c3974bce7001f6bc62f9e5cc6e193ad4d582ce10313532f","433525fc4e72ed85cf2aedcceb3d28845b0a238099893153691ce5ea34253079","7cd39700b8789c5cb533f52b5ad7fbbea7ba235509261de80445f7979506a1ef","03b9f4fe1266e772785234b9268ac49cbd792b5524330e52eb25f6095372fcb7","57faea53688177246aa69234c9a9b4817dbc04918d75246e91834c8e6b41946b","217242871994c00998cf8fa2efd9aab88874330076058ff7944b7479cb8c8c73","3fac210fea057d39e5ad609440c17f3da0c608be4a8f86804c9dfd917397ad14","0b48a0f933e61d86840a3fe3c83a71e98303181dd7a59db92334486a8b5b35cf","b5297843c186cb0c99102c6052ee3ba4549b167649437654ad4016b1d703ef86","5ae684e1532dfc43ed9e71dae2f38b99ca7ea5ceca0f1cbc39d477f1018500e6","b8717f3d1ff965bb80c4b7cfbd9ab3c54542a81f6ff02ca3ca2925bcace0fbdb","e5e47d2f3df36edd25268edf889f0f986b8100fc57fc21b4da1a4a00a3876241","5847d72935c723f39cf278ca8ef102f47a093f6898d37dd5372869856dc31f59","7aab6f0a905363afd09295a22a92dec1aebc1948b793427528163774d7fdcb5e","e335fe6ab0596b0dbfd8427d9997dc72ea865c91e9b0fd1eb6b4341f64e3379f","96a646bc00e1746295c0766c78d62e9cc45e7f3fb04d568a3a13fcb715991c43","76572a3e9b343cf375c590273c1d852f3eb4c6ba65dec1d54bd9ad70bd3653bc","a8f0a14d1369526eb63ccfedbd32266083a044b08900b22b1822584cc7d97808","6fe2c5d49691758dabc5b939510f3578391da9479b01964ea71f102e5f4dd73c","35e6a2432fbb0f76864ba47311046a09bc25853d3520348f4b1027a35fceecbb","568dfeb4cb9a65ae3dfe4b7885bdfe9684a68615fee606fec38687f94d5dcddc","1733e9925a6db4491601f8d9e0aaf0108aa133268a5369768fe7dedbb4d60e77","af4f7632b82ab4b1581f37a51f23bdee09ffff926a93fe132604ef1eab277ef5","da11fbbcab91a13b3e329d99f49b2eef4439074e3a2273abe239d42e80569ab8","e313680357f0b77395ee3b61b4d85bcdfbac045b2f1383a8f3da9d509463ba13","1c78af2ea894b9172646d50bc56ffeb18ef16aecbb7134be130c96ede53129d8","8476d5916f9ccb4b1df347dc415892a1b30624b4a5d4ccf740df38bf2b180536","b4daf437d565cf9fd7aec1d4c08cd0b2334ab603742db09d15cb00f5735e56e1"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files"}
-[debug] [2026-02-19T10:52:39.321Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.321Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.322Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.322Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.323Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.323Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.324Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.324Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.324Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.325Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.325Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.327Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.327Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.329Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.330Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.331Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.332Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.332Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.332Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.332Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.332Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.333Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.333Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.334Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.334Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.335Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.336Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.336Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.337Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.337Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.337Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.337Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.338Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.338Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.338Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.338Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.339Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.339Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.339Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.339Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.339Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.339Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.340Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.340Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.340Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.340Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.341Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.341Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.341Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.342Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.342Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.342Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.342Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.343Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.343Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.343Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.343Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.343Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.343Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.344Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.344Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.344Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.344Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.344Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.345Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.345Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.345Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.345Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.345Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.345Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.345Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.346Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.346Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.346Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.347Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.347Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.347Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.347Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.347Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.347Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.348Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.348Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.348Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.348Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.348Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.348Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.349Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.349Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.349Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.349Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.349Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.349Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.352Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.352Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.352Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.352Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.353Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.353Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.353Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.353Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.353Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.353Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.353Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.353Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.354Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.354Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.354Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.354Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.354Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.354Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.354Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.354Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.355Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.355Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:39.355Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/21dc9c059ba242edeaa78d2afb48d9addb3644b1997840404f96670bd3e60ff8 [none]
-[debug] [2026-02-19T10:52:39.355Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/21dc9c059ba242edeaa78d2afb48d9addb3644b1997840404f96670bd3e60ff8 [stream]
-[debug] [2026-02-19T10:52:39.359Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/4db93811512da073c93a1d631affccef3e22da7ff9456c9339141ac93a9e5ab6 [none]
-[debug] [2026-02-19T10:52:39.359Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/4db93811512da073c93a1d631affccef3e22da7ff9456c9339141ac93a9e5ab6 [stream]
-[debug] [2026-02-19T10:52:39.361Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/9751f4d0061479cbac9eafd582e9e9a9e344add0530d12d4495e54737ff97898 [none]
-[debug] [2026-02-19T10:52:39.361Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/9751f4d0061479cbac9eafd582e9e9a9e344add0530d12d4495e54737ff97898 [stream]
-[debug] [2026-02-19T10:52:39.363Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/c33867799e285a3e8b4a56319ad9171319e43b5792b73a2f1ba3bf29714fc394 [none]
-[debug] [2026-02-19T10:52:39.363Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/c33867799e285a3e8b4a56319ad9171319e43b5792b73a2f1ba3bf29714fc394 [stream]
-[debug] [2026-02-19T10:52:39.364Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/8b3bd6cf1f5a110bcbefbb7404c415210b29b7b0026ce0b73746a13c5326013c [none]
-[debug] [2026-02-19T10:52:39.364Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/8b3bd6cf1f5a110bcbefbb7404c415210b29b7b0026ce0b73746a13c5326013c [stream]
-[debug] [2026-02-19T10:52:39.366Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/a42a03b66628d01e6039f8d9cb23409d5b59f52e9222d4df14f7ec6bc7447ac9 [none]
-[debug] [2026-02-19T10:52:39.366Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/a42a03b66628d01e6039f8d9cb23409d5b59f52e9222d4df14f7ec6bc7447ac9 [stream]
-[debug] [2026-02-19T10:52:39.367Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b03dd8a886f8301692e7c610e8faf0958d38139a8b64a308e365576272179622 [none]
-[debug] [2026-02-19T10:52:39.368Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b03dd8a886f8301692e7c610e8faf0958d38139a8b64a308e365576272179622 [stream]
-[debug] [2026-02-19T10:52:39.369Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/7286bdc95b963ae3226b7bcf57a3a82697593bdddee14b094493cfd65085d2d6 [none]
-[debug] [2026-02-19T10:52:39.369Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/7286bdc95b963ae3226b7bcf57a3a82697593bdddee14b094493cfd65085d2d6 [stream]
-[debug] [2026-02-19T10:52:39.371Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/44d69b0a42a718e3d9e76931f4fa18bdb78bf151e0623c7f33a28b9a2f635fc6 [none]
-[debug] [2026-02-19T10:52:39.371Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/44d69b0a42a718e3d9e76931f4fa18bdb78bf151e0623c7f33a28b9a2f635fc6 [stream]
-[debug] [2026-02-19T10:52:39.372Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/25928cf2c53a15860c50990273f119b2e4cfd3ba9228dda7d43f11699765768e [none]
-[debug] [2026-02-19T10:52:39.372Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/25928cf2c53a15860c50990273f119b2e4cfd3ba9228dda7d43f11699765768e [stream]
-[debug] [2026-02-19T10:52:39.374Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/6924d1f705c5648eb8fcbeb2a7dc1b02e01709a83f969d9fabe6430aa3f8f78a [none]
-[debug] [2026-02-19T10:52:39.374Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/6924d1f705c5648eb8fcbeb2a7dc1b02e01709a83f969d9fabe6430aa3f8f78a [stream]
-[debug] [2026-02-19T10:52:39.375Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e08fb1ae03b6245f7c1487e8818fcdc5192c215d57781456f09831b0c4e6cb0f [none]
-[debug] [2026-02-19T10:52:39.375Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e08fb1ae03b6245f7c1487e8818fcdc5192c215d57781456f09831b0c4e6cb0f [stream]
-[debug] [2026-02-19T10:52:39.378Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/2a6c2eeee292b27394176eb340913779b33401f4ad673565c1ee6554894d9e3c [none]
-[debug] [2026-02-19T10:52:39.378Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/2a6c2eeee292b27394176eb340913779b33401f4ad673565c1ee6554894d9e3c [stream]
-[debug] [2026-02-19T10:52:39.380Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/58766951e606b2022f59cd9f29b2917abd798a925686f219a831c72d3b896199 [none]
-[debug] [2026-02-19T10:52:39.380Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/58766951e606b2022f59cd9f29b2917abd798a925686f219a831c72d3b896199 [stream]
-[debug] [2026-02-19T10:52:39.381Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/2396bb25f1f3e513fa4e0353023ae976e0f1621e65a36e91e221b45378b4d9eb [none]
-[debug] [2026-02-19T10:52:39.382Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/2396bb25f1f3e513fa4e0353023ae976e0f1621e65a36e91e221b45378b4d9eb [stream]
-[debug] [2026-02-19T10:52:39.383Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/8c8a8cb0e8c7a82ecc60388aadba5256fd553336e86360a25970ac8a8af06d66 [none]
-[debug] [2026-02-19T10:52:39.383Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/8c8a8cb0e8c7a82ecc60388aadba5256fd553336e86360a25970ac8a8af06d66 [stream]
-[debug] [2026-02-19T10:52:39.384Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/f4ab991a3cfe04a6e987fed4ea561cb55a4c7da0a8c7e747a73ddc8df3367e20 [none]
-[debug] [2026-02-19T10:52:39.384Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/f4ab991a3cfe04a6e987fed4ea561cb55a4c7da0a8c7e747a73ddc8df3367e20 [stream]
-[debug] [2026-02-19T10:52:39.385Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/6ee9e7fa10a145192315512e5155f85ca9aa7f341386804e737e7101d8c37bd3 [none]
-[debug] [2026-02-19T10:52:39.385Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/6ee9e7fa10a145192315512e5155f85ca9aa7f341386804e737e7101d8c37bd3 [stream]
-[debug] [2026-02-19T10:52:39.387Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/9e1f5e25c0f87b9741123a8c67a36212ff7168b788a7ab1e7ddb0defe521bec6 [none]
-[debug] [2026-02-19T10:52:39.387Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/9e1f5e25c0f87b9741123a8c67a36212ff7168b788a7ab1e7ddb0defe521bec6 [stream]
-[debug] [2026-02-19T10:52:39.388Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/c5f620940ece873384cc5b373530a5b1b200129b040f2d3f3bca280c553646bf [none]
-[debug] [2026-02-19T10:52:39.389Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/c5f620940ece873384cc5b373530a5b1b200129b040f2d3f3bca280c553646bf [stream]
-[debug] [2026-02-19T10:52:39.390Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/af09c221e96fb14d5fe6158c4f0c93c747dd8705b8ac9f732a65b17848753ace [none]
-[debug] [2026-02-19T10:52:39.390Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/af09c221e96fb14d5fe6158c4f0c93c747dd8705b8ac9f732a65b17848753ace [stream]
-[debug] [2026-02-19T10:52:39.391Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/fcf4dd7e6f3a969dedb5ac127c2d3e02aa68cd7d5870cedd02de6d4b9794e346 [none]
-[debug] [2026-02-19T10:52:39.391Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/fcf4dd7e6f3a969dedb5ac127c2d3e02aa68cd7d5870cedd02de6d4b9794e346 [stream]
-[debug] [2026-02-19T10:52:39.395Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/3c0d48469d4f9d26f414fb241e63e0e870d7d6dd08f48719d522a1918da6b40b [none]
-[debug] [2026-02-19T10:52:39.395Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/3c0d48469d4f9d26f414fb241e63e0e870d7d6dd08f48719d522a1918da6b40b [stream]
-[debug] [2026-02-19T10:52:39.396Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/1b86067082ee76941db81589d2b933689e33dade009a7024790f0effb9f11b07 [none]
-[debug] [2026-02-19T10:52:39.396Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/1b86067082ee76941db81589d2b933689e33dade009a7024790f0effb9f11b07 [stream]
-[debug] [2026-02-19T10:52:39.402Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/033b7b2d8c0304f97fae56f0d0bd4019d72b6f6c2d428557b2fe2779ffbe90b3 [none]
-[debug] [2026-02-19T10:52:39.402Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/033b7b2d8c0304f97fae56f0d0bd4019d72b6f6c2d428557b2fe2779ffbe90b3 [stream]
-[debug] [2026-02-19T10:52:39.404Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/d1d31d81f149f6aaccd327ae12fc15006929106f3beea15fa1b0a58279ed0a7a [none]
-[debug] [2026-02-19T10:52:39.404Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/d1d31d81f149f6aaccd327ae12fc15006929106f3beea15fa1b0a58279ed0a7a [stream]
-[debug] [2026-02-19T10:52:39.405Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/4d6f0911886c7769d45815e0a3658d38c93529bda941e9868c8bb2932dbbc896 [none]
-[debug] [2026-02-19T10:52:39.405Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/4d6f0911886c7769d45815e0a3658d38c93529bda941e9868c8bb2932dbbc896 [stream]
-[debug] [2026-02-19T10:52:39.407Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/fa9656b545885701042c71bd3b5fcf4e356f525147b79ac07bfea1ccab2a20be [none]
-[debug] [2026-02-19T10:52:39.407Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/fa9656b545885701042c71bd3b5fcf4e356f525147b79ac07bfea1ccab2a20be [stream]
-[debug] [2026-02-19T10:52:39.408Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/3ab705e631bb5c9dc8901fc6c259aee75b1631a97a40e8aab7636520771f441c [none]
-[debug] [2026-02-19T10:52:39.408Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/3ab705e631bb5c9dc8901fc6c259aee75b1631a97a40e8aab7636520771f441c [stream]
-[debug] [2026-02-19T10:52:39.409Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/ec4d0af46989b1552c3974bce7001f6bc62f9e5cc6e193ad4d582ce10313532f [none]
-[debug] [2026-02-19T10:52:39.410Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/ec4d0af46989b1552c3974bce7001f6bc62f9e5cc6e193ad4d582ce10313532f [stream]
-[debug] [2026-02-19T10:52:39.411Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/433525fc4e72ed85cf2aedcceb3d28845b0a238099893153691ce5ea34253079 [none]
-[debug] [2026-02-19T10:52:39.411Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/433525fc4e72ed85cf2aedcceb3d28845b0a238099893153691ce5ea34253079 [stream]
-[debug] [2026-02-19T10:52:39.412Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/7cd39700b8789c5cb533f52b5ad7fbbea7ba235509261de80445f7979506a1ef [none]
-[debug] [2026-02-19T10:52:39.412Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/7cd39700b8789c5cb533f52b5ad7fbbea7ba235509261de80445f7979506a1ef [stream]
-[debug] [2026-02-19T10:52:39.413Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/03b9f4fe1266e772785234b9268ac49cbd792b5524330e52eb25f6095372fcb7 [none]
-[debug] [2026-02-19T10:52:39.413Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/03b9f4fe1266e772785234b9268ac49cbd792b5524330e52eb25f6095372fcb7 [stream]
-[debug] [2026-02-19T10:52:39.415Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/57faea53688177246aa69234c9a9b4817dbc04918d75246e91834c8e6b41946b [none]
-[debug] [2026-02-19T10:52:39.415Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/57faea53688177246aa69234c9a9b4817dbc04918d75246e91834c8e6b41946b [stream]
-[debug] [2026-02-19T10:52:39.431Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/217242871994c00998cf8fa2efd9aab88874330076058ff7944b7479cb8c8c73 [none]
-[debug] [2026-02-19T10:52:39.431Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/217242871994c00998cf8fa2efd9aab88874330076058ff7944b7479cb8c8c73 [stream]
-[debug] [2026-02-19T10:52:39.435Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/3fac210fea057d39e5ad609440c17f3da0c608be4a8f86804c9dfd917397ad14 [none]
-[debug] [2026-02-19T10:52:39.436Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/3fac210fea057d39e5ad609440c17f3da0c608be4a8f86804c9dfd917397ad14 [stream]
-[debug] [2026-02-19T10:52:39.438Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/0b48a0f933e61d86840a3fe3c83a71e98303181dd7a59db92334486a8b5b35cf [none]
-[debug] [2026-02-19T10:52:39.438Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/0b48a0f933e61d86840a3fe3c83a71e98303181dd7a59db92334486a8b5b35cf [stream]
-[debug] [2026-02-19T10:52:39.441Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b5297843c186cb0c99102c6052ee3ba4549b167649437654ad4016b1d703ef86 [none]
-[debug] [2026-02-19T10:52:39.441Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b5297843c186cb0c99102c6052ee3ba4549b167649437654ad4016b1d703ef86 [stream]
-[debug] [2026-02-19T10:52:39.446Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/5ae684e1532dfc43ed9e71dae2f38b99ca7ea5ceca0f1cbc39d477f1018500e6 [none]
-[debug] [2026-02-19T10:52:39.447Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/5ae684e1532dfc43ed9e71dae2f38b99ca7ea5ceca0f1cbc39d477f1018500e6 [stream]
-[debug] [2026-02-19T10:52:39.449Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b8717f3d1ff965bb80c4b7cfbd9ab3c54542a81f6ff02ca3ca2925bcace0fbdb [none]
-[debug] [2026-02-19T10:52:39.449Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b8717f3d1ff965bb80c4b7cfbd9ab3c54542a81f6ff02ca3ca2925bcace0fbdb [stream]
-[debug] [2026-02-19T10:52:39.450Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e5e47d2f3df36edd25268edf889f0f986b8100fc57fc21b4da1a4a00a3876241 [none]
-[debug] [2026-02-19T10:52:39.451Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e5e47d2f3df36edd25268edf889f0f986b8100fc57fc21b4da1a4a00a3876241 [stream]
-[debug] [2026-02-19T10:52:39.452Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/5847d72935c723f39cf278ca8ef102f47a093f6898d37dd5372869856dc31f59 [none]
-[debug] [2026-02-19T10:52:39.452Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/5847d72935c723f39cf278ca8ef102f47a093f6898d37dd5372869856dc31f59 [stream]
-[debug] [2026-02-19T10:52:39.453Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/7aab6f0a905363afd09295a22a92dec1aebc1948b793427528163774d7fdcb5e [none]
-[debug] [2026-02-19T10:52:39.454Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/7aab6f0a905363afd09295a22a92dec1aebc1948b793427528163774d7fdcb5e [stream]
-[debug] [2026-02-19T10:52:39.455Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e335fe6ab0596b0dbfd8427d9997dc72ea865c91e9b0fd1eb6b4341f64e3379f [none]
-[debug] [2026-02-19T10:52:39.455Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e335fe6ab0596b0dbfd8427d9997dc72ea865c91e9b0fd1eb6b4341f64e3379f [stream]
-[debug] [2026-02-19T10:52:39.456Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/96a646bc00e1746295c0766c78d62e9cc45e7f3fb04d568a3a13fcb715991c43 [none]
-[debug] [2026-02-19T10:52:39.457Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/96a646bc00e1746295c0766c78d62e9cc45e7f3fb04d568a3a13fcb715991c43 [stream]
-[debug] [2026-02-19T10:52:39.459Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/76572a3e9b343cf375c590273c1d852f3eb4c6ba65dec1d54bd9ad70bd3653bc [none]
-[debug] [2026-02-19T10:52:39.459Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/76572a3e9b343cf375c590273c1d852f3eb4c6ba65dec1d54bd9ad70bd3653bc [stream]
-[debug] [2026-02-19T10:52:39.460Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/a8f0a14d1369526eb63ccfedbd32266083a044b08900b22b1822584cc7d97808 [none]
-[debug] [2026-02-19T10:52:39.460Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/a8f0a14d1369526eb63ccfedbd32266083a044b08900b22b1822584cc7d97808 [stream]
-[debug] [2026-02-19T10:52:39.461Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/6fe2c5d49691758dabc5b939510f3578391da9479b01964ea71f102e5f4dd73c [none]
-[debug] [2026-02-19T10:52:39.461Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/6fe2c5d49691758dabc5b939510f3578391da9479b01964ea71f102e5f4dd73c [stream]
-[debug] [2026-02-19T10:52:39.463Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/35e6a2432fbb0f76864ba47311046a09bc25853d3520348f4b1027a35fceecbb [none]
-[debug] [2026-02-19T10:52:39.463Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/35e6a2432fbb0f76864ba47311046a09bc25853d3520348f4b1027a35fceecbb [stream]
-[debug] [2026-02-19T10:52:39.464Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/568dfeb4cb9a65ae3dfe4b7885bdfe9684a68615fee606fec38687f94d5dcddc [none]
-[debug] [2026-02-19T10:52:39.464Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/568dfeb4cb9a65ae3dfe4b7885bdfe9684a68615fee606fec38687f94d5dcddc [stream]
-[debug] [2026-02-19T10:52:39.465Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/1733e9925a6db4491601f8d9e0aaf0108aa133268a5369768fe7dedbb4d60e77 [none]
-[debug] [2026-02-19T10:52:39.466Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/1733e9925a6db4491601f8d9e0aaf0108aa133268a5369768fe7dedbb4d60e77 [stream]
-[debug] [2026-02-19T10:52:39.468Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/af4f7632b82ab4b1581f37a51f23bdee09ffff926a93fe132604ef1eab277ef5 [none]
-[debug] [2026-02-19T10:52:39.468Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/af4f7632b82ab4b1581f37a51f23bdee09ffff926a93fe132604ef1eab277ef5 [stream]
-[debug] [2026-02-19T10:52:39.471Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/da11fbbcab91a13b3e329d99f49b2eef4439074e3a2273abe239d42e80569ab8 [none]
-[debug] [2026-02-19T10:52:39.471Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/da11fbbcab91a13b3e329d99f49b2eef4439074e3a2273abe239d42e80569ab8 [stream]
-[debug] [2026-02-19T10:52:39.475Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e313680357f0b77395ee3b61b4d85bcdfbac045b2f1383a8f3da9d509463ba13 [none]
-[debug] [2026-02-19T10:52:39.475Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e313680357f0b77395ee3b61b4d85bcdfbac045b2f1383a8f3da9d509463ba13 [stream]
-[debug] [2026-02-19T10:52:39.478Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/1c78af2ea894b9172646d50bc56ffeb18ef16aecbb7134be130c96ede53129d8 [none]
-[debug] [2026-02-19T10:52:39.478Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/1c78af2ea894b9172646d50bc56ffeb18ef16aecbb7134be130c96ede53129d8 [stream]
-[debug] [2026-02-19T10:52:39.480Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/8476d5916f9ccb4b1df347dc415892a1b30624b4a5d4ccf740df38bf2b180536 [none]
-[debug] [2026-02-19T10:52:39.481Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/8476d5916f9ccb4b1df347dc415892a1b30624b4a5d4ccf740df38bf2b180536 [stream]
-[debug] [2026-02-19T10:52:39.482Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b4daf437d565cf9fd7aec1d4c08cd0b2334ab603742db09d15cb00f5735e56e1 [none]
-[debug] [2026-02-19T10:52:39.482Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b4daf437d565cf9fd7aec1d4c08cd0b2334ab603742db09d15cb00f5735e56e1 [stream]
-[debug] [2026-02-19T10:52:39.484Z] [hosting][populate queue][FINAL] {"max":984,"min":984,"avg":984,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1114}
-[debug] [2026-02-19T10:52:39.484Z] [hosting] uploads queued: 57
-[info] i  hosting: uploading new files [0/57] (0%) 
-[debug] [2026-02-19T10:52:40.468Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/af4f7632b82ab4b1581f37a51f23bdee09ffff926a93fe132604ef1eab277ef5 200
-[debug] [2026-02-19T10:52:40.469Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/af4f7632b82ab4b1581f37a51f23bdee09ffff926a93fe132604ef1eab277ef5 [stream]
-[debug] [2026-02-19T10:52:40.478Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/1c78af2ea894b9172646d50bc56ffeb18ef16aecbb7134be130c96ede53129d8 200
-[debug] [2026-02-19T10:52:40.479Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/1c78af2ea894b9172646d50bc56ffeb18ef16aecbb7134be130c96ede53129d8 [stream]
-[debug] [2026-02-19T10:52:40.480Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/af09c221e96fb14d5fe6158c4f0c93c747dd8705b8ac9f732a65b17848753ace 200
-[debug] [2026-02-19T10:52:40.480Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/af09c221e96fb14d5fe6158c4f0c93c747dd8705b8ac9f732a65b17848753ace [stream]
-[debug] [2026-02-19T10:52:40.483Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e335fe6ab0596b0dbfd8427d9997dc72ea865c91e9b0fd1eb6b4341f64e3379f 200
-[debug] [2026-02-19T10:52:40.483Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e335fe6ab0596b0dbfd8427d9997dc72ea865c91e9b0fd1eb6b4341f64e3379f [stream]
-[debug] [2026-02-19T10:52:40.484Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/1b86067082ee76941db81589d2b933689e33dade009a7024790f0effb9f11b07 200
-[debug] [2026-02-19T10:52:40.484Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/1b86067082ee76941db81589d2b933689e33dade009a7024790f0effb9f11b07 [stream]
-[debug] [2026-02-19T10:52:40.486Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/58766951e606b2022f59cd9f29b2917abd798a925686f219a831c72d3b896199 200
-[debug] [2026-02-19T10:52:40.486Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/58766951e606b2022f59cd9f29b2917abd798a925686f219a831c72d3b896199 [stream]
-[debug] [2026-02-19T10:52:40.486Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/76572a3e9b343cf375c590273c1d852f3eb4c6ba65dec1d54bd9ad70bd3653bc 200
-[debug] [2026-02-19T10:52:40.486Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/76572a3e9b343cf375c590273c1d852f3eb4c6ba65dec1d54bd9ad70bd3653bc [stream]
-[debug] [2026-02-19T10:52:40.499Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e08fb1ae03b6245f7c1487e8818fcdc5192c215d57781456f09831b0c4e6cb0f 200
-[debug] [2026-02-19T10:52:40.500Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e08fb1ae03b6245f7c1487e8818fcdc5192c215d57781456f09831b0c4e6cb0f [stream]
-[debug] [2026-02-19T10:52:40.500Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/8476d5916f9ccb4b1df347dc415892a1b30624b4a5d4ccf740df38bf2b180536 200
-[debug] [2026-02-19T10:52:40.501Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/8476d5916f9ccb4b1df347dc415892a1b30624b4a5d4ccf740df38bf2b180536 [stream]
-[debug] [2026-02-19T10:52:40.502Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/fa9656b545885701042c71bd3b5fcf4e356f525147b79ac07bfea1ccab2a20be 200
-[debug] [2026-02-19T10:52:40.502Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/fa9656b545885701042c71bd3b5fcf4e356f525147b79ac07bfea1ccab2a20be [stream]
-[debug] [2026-02-19T10:52:40.504Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/a42a03b66628d01e6039f8d9cb23409d5b59f52e9222d4df14f7ec6bc7447ac9 200
-[debug] [2026-02-19T10:52:40.504Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/a42a03b66628d01e6039f8d9cb23409d5b59f52e9222d4df14f7ec6bc7447ac9 [stream]
-[debug] [2026-02-19T10:52:40.505Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b4daf437d565cf9fd7aec1d4c08cd0b2334ab603742db09d15cb00f5735e56e1 200
-[debug] [2026-02-19T10:52:40.505Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b4daf437d565cf9fd7aec1d4c08cd0b2334ab603742db09d15cb00f5735e56e1 [stream]
-[debug] [2026-02-19T10:52:40.505Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/d1d31d81f149f6aaccd327ae12fc15006929106f3beea15fa1b0a58279ed0a7a 200
-[debug] [2026-02-19T10:52:40.506Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/d1d31d81f149f6aaccd327ae12fc15006929106f3beea15fa1b0a58279ed0a7a [stream]
-[debug] [2026-02-19T10:52:40.508Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/c33867799e285a3e8b4a56319ad9171319e43b5792b73a2f1ba3bf29714fc394 200
-[debug] [2026-02-19T10:52:40.509Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/c33867799e285a3e8b4a56319ad9171319e43b5792b73a2f1ba3bf29714fc394 [stream]
-[debug] [2026-02-19T10:52:40.523Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/44d69b0a42a718e3d9e76931f4fa18bdb78bf151e0623c7f33a28b9a2f635fc6 200
-[debug] [2026-02-19T10:52:40.523Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/44d69b0a42a718e3d9e76931f4fa18bdb78bf151e0623c7f33a28b9a2f635fc6 [stream]
-[debug] [2026-02-19T10:52:40.533Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/57faea53688177246aa69234c9a9b4817dbc04918d75246e91834c8e6b41946b 200
-[debug] [2026-02-19T10:52:40.534Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/57faea53688177246aa69234c9a9b4817dbc04918d75246e91834c8e6b41946b [stream]
-[debug] [2026-02-19T10:52:40.536Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/4d6f0911886c7769d45815e0a3658d38c93529bda941e9868c8bb2932dbbc896 200
-[debug] [2026-02-19T10:52:40.538Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/4d6f0911886c7769d45815e0a3658d38c93529bda941e9868c8bb2932dbbc896 [stream]
-[debug] [2026-02-19T10:52:40.561Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/3ab705e631bb5c9dc8901fc6c259aee75b1631a97a40e8aab7636520771f441c 200
-[debug] [2026-02-19T10:52:40.562Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/3ab705e631bb5c9dc8901fc6c259aee75b1631a97a40e8aab7636520771f441c [stream]
-[debug] [2026-02-19T10:52:40.606Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/3c0d48469d4f9d26f414fb241e63e0e870d7d6dd08f48719d522a1918da6b40b 200
-[debug] [2026-02-19T10:52:40.607Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/3c0d48469d4f9d26f414fb241e63e0e870d7d6dd08f48719d522a1918da6b40b [stream]
-[debug] [2026-02-19T10:52:40.608Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/433525fc4e72ed85cf2aedcceb3d28845b0a238099893153691ce5ea34253079 200
-[debug] [2026-02-19T10:52:40.608Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/433525fc4e72ed85cf2aedcceb3d28845b0a238099893153691ce5ea34253079 [stream]
-[debug] [2026-02-19T10:52:40.609Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e5e47d2f3df36edd25268edf889f0f986b8100fc57fc21b4da1a4a00a3876241 200
-[debug] [2026-02-19T10:52:40.609Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e5e47d2f3df36edd25268edf889f0f986b8100fc57fc21b4da1a4a00a3876241 [stream]
-[debug] [2026-02-19T10:52:40.611Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/35e6a2432fbb0f76864ba47311046a09bc25853d3520348f4b1027a35fceecbb 200
-[debug] [2026-02-19T10:52:40.611Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/35e6a2432fbb0f76864ba47311046a09bc25853d3520348f4b1027a35fceecbb [stream]
-[debug] [2026-02-19T10:52:40.613Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/1733e9925a6db4491601f8d9e0aaf0108aa133268a5369768fe7dedbb4d60e77 200
-[debug] [2026-02-19T10:52:40.613Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/1733e9925a6db4491601f8d9e0aaf0108aa133268a5369768fe7dedbb4d60e77 [stream]
-[debug] [2026-02-19T10:52:40.616Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/6ee9e7fa10a145192315512e5155f85ca9aa7f341386804e737e7101d8c37bd3 200
-[debug] [2026-02-19T10:52:40.616Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/6ee9e7fa10a145192315512e5155f85ca9aa7f341386804e737e7101d8c37bd3 [stream]
-[debug] [2026-02-19T10:52:40.622Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/3fac210fea057d39e5ad609440c17f3da0c608be4a8f86804c9dfd917397ad14 200
-[debug] [2026-02-19T10:52:40.622Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/3fac210fea057d39e5ad609440c17f3da0c608be4a8f86804c9dfd917397ad14 [stream]
-[debug] [2026-02-19T10:52:40.626Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/da11fbbcab91a13b3e329d99f49b2eef4439074e3a2273abe239d42e80569ab8 200
-[debug] [2026-02-19T10:52:40.626Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/da11fbbcab91a13b3e329d99f49b2eef4439074e3a2273abe239d42e80569ab8 [stream]
-[debug] [2026-02-19T10:52:40.627Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/4db93811512da073c93a1d631affccef3e22da7ff9456c9339141ac93a9e5ab6 200
-[debug] [2026-02-19T10:52:40.627Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/4db93811512da073c93a1d631affccef3e22da7ff9456c9339141ac93a9e5ab6 [stream]
-[debug] [2026-02-19T10:52:40.632Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/21dc9c059ba242edeaa78d2afb48d9addb3644b1997840404f96670bd3e60ff8 200
-[debug] [2026-02-19T10:52:40.632Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/21dc9c059ba242edeaa78d2afb48d9addb3644b1997840404f96670bd3e60ff8 [stream]
-[debug] [2026-02-19T10:52:40.633Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/033b7b2d8c0304f97fae56f0d0bd4019d72b6f6c2d428557b2fe2779ffbe90b3 200
-[debug] [2026-02-19T10:52:40.633Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/033b7b2d8c0304f97fae56f0d0bd4019d72b6f6c2d428557b2fe2779ffbe90b3 [stream]
-[debug] [2026-02-19T10:52:40.646Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/6924d1f705c5648eb8fcbeb2a7dc1b02e01709a83f969d9fabe6430aa3f8f78a 200
-[debug] [2026-02-19T10:52:40.649Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/6924d1f705c5648eb8fcbeb2a7dc1b02e01709a83f969d9fabe6430aa3f8f78a [stream]
-[debug] [2026-02-19T10:52:40.650Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/5847d72935c723f39cf278ca8ef102f47a093f6898d37dd5372869856dc31f59 200
-[debug] [2026-02-19T10:52:40.650Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/5847d72935c723f39cf278ca8ef102f47a093f6898d37dd5372869856dc31f59 [stream]
-[debug] [2026-02-19T10:52:40.651Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b8717f3d1ff965bb80c4b7cfbd9ab3c54542a81f6ff02ca3ca2925bcace0fbdb 200
-[debug] [2026-02-19T10:52:40.651Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b8717f3d1ff965bb80c4b7cfbd9ab3c54542a81f6ff02ca3ca2925bcace0fbdb [stream]
-[debug] [2026-02-19T10:52:40.658Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/6fe2c5d49691758dabc5b939510f3578391da9479b01964ea71f102e5f4dd73c 200
-[debug] [2026-02-19T10:52:40.658Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/6fe2c5d49691758dabc5b939510f3578391da9479b01964ea71f102e5f4dd73c [stream]
-[debug] [2026-02-19T10:52:40.661Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/03b9f4fe1266e772785234b9268ac49cbd792b5524330e52eb25f6095372fcb7 200
-[debug] [2026-02-19T10:52:40.661Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/03b9f4fe1266e772785234b9268ac49cbd792b5524330e52eb25f6095372fcb7 [stream]
-[debug] [2026-02-19T10:52:40.665Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/5ae684e1532dfc43ed9e71dae2f38b99ca7ea5ceca0f1cbc39d477f1018500e6 200
-[debug] [2026-02-19T10:52:40.667Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/5ae684e1532dfc43ed9e71dae2f38b99ca7ea5ceca0f1cbc39d477f1018500e6 [stream]
-[debug] [2026-02-19T10:52:40.672Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/2396bb25f1f3e513fa4e0353023ae976e0f1621e65a36e91e221b45378b4d9eb 200
-[debug] [2026-02-19T10:52:40.675Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/2396bb25f1f3e513fa4e0353023ae976e0f1621e65a36e91e221b45378b4d9eb [stream]
-[debug] [2026-02-19T10:52:40.676Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/fcf4dd7e6f3a969dedb5ac127c2d3e02aa68cd7d5870cedd02de6d4b9794e346 200
-[debug] [2026-02-19T10:52:40.677Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/fcf4dd7e6f3a969dedb5ac127c2d3e02aa68cd7d5870cedd02de6d4b9794e346 [stream]
-[debug] [2026-02-19T10:52:40.679Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/9751f4d0061479cbac9eafd582e9e9a9e344add0530d12d4495e54737ff97898 200
-[debug] [2026-02-19T10:52:40.679Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/9751f4d0061479cbac9eafd582e9e9a9e344add0530d12d4495e54737ff97898 [stream]
-[debug] [2026-02-19T10:52:40.680Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/7cd39700b8789c5cb533f52b5ad7fbbea7ba235509261de80445f7979506a1ef 200
-[debug] [2026-02-19T10:52:40.680Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/7cd39700b8789c5cb533f52b5ad7fbbea7ba235509261de80445f7979506a1ef [stream]
-[debug] [2026-02-19T10:52:40.682Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b03dd8a886f8301692e7c610e8faf0958d38139a8b64a308e365576272179622 200
-[debug] [2026-02-19T10:52:40.684Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b03dd8a886f8301692e7c610e8faf0958d38139a8b64a308e365576272179622 [stream]
-[debug] [2026-02-19T10:52:40.708Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/c5f620940ece873384cc5b373530a5b1b200129b040f2d3f3bca280c553646bf 200
-[debug] [2026-02-19T10:52:40.708Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/c5f620940ece873384cc5b373530a5b1b200129b040f2d3f3bca280c553646bf [stream]
-[debug] [2026-02-19T10:52:40.729Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/0b48a0f933e61d86840a3fe3c83a71e98303181dd7a59db92334486a8b5b35cf 200
-[debug] [2026-02-19T10:52:40.729Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/0b48a0f933e61d86840a3fe3c83a71e98303181dd7a59db92334486a8b5b35cf [stream]
-[debug] [2026-02-19T10:52:40.737Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/217242871994c00998cf8fa2efd9aab88874330076058ff7944b7479cb8c8c73 200
-[debug] [2026-02-19T10:52:40.738Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/217242871994c00998cf8fa2efd9aab88874330076058ff7944b7479cb8c8c73 [stream]
-[debug] [2026-02-19T10:52:40.742Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/2a6c2eeee292b27394176eb340913779b33401f4ad673565c1ee6554894d9e3c 200
-[debug] [2026-02-19T10:52:40.742Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/2a6c2eeee292b27394176eb340913779b33401f4ad673565c1ee6554894d9e3c [stream]
-[debug] [2026-02-19T10:52:40.753Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/7aab6f0a905363afd09295a22a92dec1aebc1948b793427528163774d7fdcb5e 200
-[debug] [2026-02-19T10:52:40.753Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/7aab6f0a905363afd09295a22a92dec1aebc1948b793427528163774d7fdcb5e [stream]
-[debug] [2026-02-19T10:52:40.760Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/8b3bd6cf1f5a110bcbefbb7404c415210b29b7b0026ce0b73746a13c5326013c 200
-[debug] [2026-02-19T10:52:40.761Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/8b3bd6cf1f5a110bcbefbb7404c415210b29b7b0026ce0b73746a13c5326013c [stream]
-[debug] [2026-02-19T10:52:40.782Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/25928cf2c53a15860c50990273f119b2e4cfd3ba9228dda7d43f11699765768e 200
-[debug] [2026-02-19T10:52:40.783Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/25928cf2c53a15860c50990273f119b2e4cfd3ba9228dda7d43f11699765768e [stream]
-[debug] [2026-02-19T10:52:40.817Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/7286bdc95b963ae3226b7bcf57a3a82697593bdddee14b094493cfd65085d2d6 200
-[debug] [2026-02-19T10:52:40.817Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/7286bdc95b963ae3226b7bcf57a3a82697593bdddee14b094493cfd65085d2d6 [stream]
-[debug] [2026-02-19T10:52:40.828Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/ec4d0af46989b1552c3974bce7001f6bc62f9e5cc6e193ad4d582ce10313532f 200
-[debug] [2026-02-19T10:52:40.828Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/ec4d0af46989b1552c3974bce7001f6bc62f9e5cc6e193ad4d582ce10313532f [stream]
-[debug] [2026-02-19T10:52:40.832Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b5297843c186cb0c99102c6052ee3ba4549b167649437654ad4016b1d703ef86 200
-[debug] [2026-02-19T10:52:40.833Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/b5297843c186cb0c99102c6052ee3ba4549b167649437654ad4016b1d703ef86 [stream]
-[debug] [2026-02-19T10:52:40.867Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e313680357f0b77395ee3b61b4d85bcdfbac045b2f1383a8f3da9d509463ba13 200
-[debug] [2026-02-19T10:52:40.867Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/e313680357f0b77395ee3b61b4d85bcdfbac045b2f1383a8f3da9d509463ba13 [stream]
-[debug] [2026-02-19T10:52:40.891Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/568dfeb4cb9a65ae3dfe4b7885bdfe9684a68615fee606fec38687f94d5dcddc 200
-[debug] [2026-02-19T10:52:40.892Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/568dfeb4cb9a65ae3dfe4b7885bdfe9684a68615fee606fec38687f94d5dcddc [stream]
-[debug] [2026-02-19T10:52:40.983Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/8c8a8cb0e8c7a82ecc60388aadba5256fd553336e86360a25970ac8a8af06d66 200
-[debug] [2026-02-19T10:52:40.984Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/8c8a8cb0e8c7a82ecc60388aadba5256fd553336e86360a25970ac8a8af06d66 [stream]
-[debug] [2026-02-19T10:52:40.994Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/a8f0a14d1369526eb63ccfedbd32266083a044b08900b22b1822584cc7d97808 200
-[debug] [2026-02-19T10:52:40.994Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/a8f0a14d1369526eb63ccfedbd32266083a044b08900b22b1822584cc7d97808 [stream]
-[debug] [2026-02-19T10:52:40.995Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/96a646bc00e1746295c0766c78d62e9cc45e7f3fb04d568a3a13fcb715991c43 200
-[debug] [2026-02-19T10:52:40.995Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/96a646bc00e1746295c0766c78d62e9cc45e7f3fb04d568a3a13fcb715991c43 [stream]
-[debug] [2026-02-19T10:52:41.028Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/f4ab991a3cfe04a6e987fed4ea561cb55a4c7da0a8c7e747a73ddc8df3367e20 200
-[debug] [2026-02-19T10:52:41.028Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/f4ab991a3cfe04a6e987fed4ea561cb55a4c7da0a8c7e747a73ddc8df3367e20 [stream]
-[debug] [2026-02-19T10:52:41.029Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/9e1f5e25c0f87b9741123a8c67a36212ff7168b788a7ab1e7ddb0defe521bec6 200
-[debug] [2026-02-19T10:52:41.029Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/kpopvoting/versions/0e4bb90104d1e8eb/files/9e1f5e25c0f87b9741123a8c67a36212ff7168b788a7ab1e7ddb0defe521bec6 [stream]
-[debug] [2026-02-19T10:52:41.030Z] [hosting][upload queue][FINAL] {"max":1692,"min":1116,"avg":1319.929824561404,"active":0,"complete":57,"success":57,"errored":0,"retried":0,"total":57,"elapsed":1710}
-[info] i  hosting: upload complete 
-[info] ✔  hosting[kpopvoting]: file upload complete 
-[debug] [2026-02-19T10:52:41.031Z] [hosting] deploy completed after 2841ms
-[debug] [2026-02-19T10:52:41.031Z] [
-  {
-    "config": {
-      "public": ".",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ],
-      "site": "kpopvoting"
-    },
-    "version": "projects/672495567896/sites/kpopvoting/versions/0e4bb90104d1e8eb"
-  }
-]
-[info] i  hosting[kpopvoting]: finalizing version... 
-[debug] [2026-02-19T10:52:41.034Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:41.038Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:41.039Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kpopvoting/versions/0e4bb90104d1e8eb updateMask=status%2Cconfig
-[debug] [2026-02-19T10:52:41.039Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kpopvoting/versions/0e4bb90104d1e8eb {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
-[debug] [2026-02-19T10:52:41.812Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kpopvoting/versions/0e4bb90104d1e8eb 200
-[debug] [2026-02-19T10:52:41.812Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kpopvoting/versions/0e4bb90104d1e8eb {"name":"projects/672495567896/sites/kpopvoting/versions/0e4bb90104d1e8eb","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase--project-idx"},"createTime":"2026-02-19T10:52:36.627912Z","createUser":{"email":"lhycpa77@gmail.com"},"finalizeTime":"2026-02-19T10:52:41.649363Z","finalizeUser":{"email":"lhycpa77@gmail.com"}}
-[debug] [2026-02-19T10:52:41.813Z] [hosting] finalized version for kpopvoting:[object Object]
-[info] ✔  hosting[kpopvoting]: version finalized 
-[info] i  hosting[kpopvoting]: releasing new version... 
-[debug] [2026-02-19T10:52:41.813Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:41.813Z] Checked if tokens are valid: true, expires at: 1771501904992
-[debug] [2026-02-19T10:52:41.814Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kpopvoting/channels/live/releases versionName=projects%2F672495567896%2Fsites%2Fkpopvoting%2Fversions%2F0e4bb90104d1e8eb
-[debug] [2026-02-19T10:52:41.814Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kpopvoting/channels/live/releases {}
-[debug] [2026-02-19T10:52:42.534Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kpopvoting/channels/live/releases 200
-[debug] [2026-02-19T10:52:42.534Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/kpopvoting/channels/live/releases {"name":"projects/672495567896/sites/kpopvoting/channels/live/releases/1771498361624000","version":{"name":"projects/672495567896/sites/kpopvoting/versions/0e4bb90104d1e8eb","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase--project-idx"},"createTime":"2026-02-19T10:52:36.627912Z","createUser":{"email":"lhycpa77@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocInKs9vXcJcFD4pYJVQRQZnDnyHqaBM8hioaOHnnM5FKEzomPY"},"finalizeTime":"2026-02-19T10:52:41.649363Z","finalizeUser":{"email":"lhycpa77@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocInKs9vXcJcFD4pYJVQRQZnDnyHqaBM8hioaOHnnM5FKEzomPY"}},"type":"DEPLOY","releaseTime":"2026-02-19T10:52:41.624Z","releaseUser":{"email":"lhycpa77@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocInKs9vXcJcFD4pYJVQRQZnDnyHqaBM8hioaOHnnM5FKEzomPY"}}
-[debug] [2026-02-19T10:52:42.534Z] [hosting] release: {"name":"projects/672495567896/sites/kpopvoting/channels/live/releases/1771498361624000","version":{"name":"projects/672495567896/sites/kpopvoting/versions/0e4bb90104d1e8eb","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase--project-idx"},"createTime":"2026-02-19T10:52:36.627912Z","createUser":{"email":"lhycpa77@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocInKs9vXcJcFD4pYJVQRQZnDnyHqaBM8hioaOHnnM5FKEzomPY"},"finalizeTime":"2026-02-19T10:52:41.649363Z","finalizeUser":{"email":"lhycpa77@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocInKs9vXcJcFD4pYJVQRQZnDnyHqaBM8hioaOHnnM5FKEzomPY"}},"type":"DEPLOY","releaseTime":"2026-02-19T10:52:41.624Z","releaseUser":{"email":"lhycpa77@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocInKs9vXcJcFD4pYJVQRQZnDnyHqaBM8hioaOHnnM5FKEzomPY"}}
-[info] ✔  hosting[kpopvoting]: release complete 
-[info] 
-[info] ✔  Deploy complete! 
-[info] 
-[info] Project Console: https://console.firebase.google.com/project/kpopvoting/overview
-[info] Hosting URL: https://kpopvoting.web.app
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-02-19T23:47:34.214Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-02-19T23:47:34.216Z] > authorizing via signed-in user (lhycpa77@gmail.com)
+[debug] [2026-02-19T23:47:34.217Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:34.218Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:34.219Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-02-19T23:47:34.219Z] > authorizing via signed-in user (lhycpa77@gmail.com)
+[debug] [2026-02-19T23:47:34.219Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:34.220Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:34.221Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo [none]
+[debug] [2026-02-19T23:47:34.225Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo [none]
+[debug] [2026-02-19T23:47:35.322Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo 200
+[debug] [2026-02-19T23:47:35.323Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo {"name":"projects/kpopvoting/billingInfo","projectId":"kpopvoting","billingAccountName":"","billingEnabled":false}
+[debug] [2026-02-19T23:47:35.337Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.337Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.338Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.338Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.339Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.339Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.363Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.363Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.363Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.364Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.364Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firestore.googleapis.com [none]
+[debug] [2026-02-19T23:47:35.364Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firestore.googleapis.com  x-goog-user-project=kpopvoting
+[debug] [2026-02-19T23:47:35.367Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-02-19T23:47:35.367Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebasedataconnect.googleapis.com  x-goog-user-project=kpopvoting
+[debug] [2026-02-19T23:47:35.370Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-02-19T23:47:35.370Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/cloudfunctions.googleapis.com  x-goog-user-project=kpopvoting
+[debug] [2026-02-19T23:47:35.372Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseapphosting.googleapis.com [none]
+[debug] [2026-02-19T23:47:35.373Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseapphosting.googleapis.com  x-goog-user-project=kpopvoting
+[debug] [2026-02-19T23:47:35.374Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseio.com [none]
+[debug] [2026-02-19T23:47:35.375Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseio.com  x-goog-user-project=kpopvoting
+[debug] [2026-02-19T23:47:35.423Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo 200
+[debug] [2026-02-19T23:47:35.423Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo {"name":"projects/kpopvoting/billingInfo","projectId":"kpopvoting","billingAccountName":"","billingEnabled":false}
+[debug] [2026-02-19T23:47:35.425Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.427Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.427Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.428Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.428Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.428Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.451Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.453Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.454Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.454Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:35.454Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firestore.googleapis.com [none]
+[debug] [2026-02-19T23:47:35.454Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firestore.googleapis.com  x-goog-user-project=kpopvoting
+[debug] [2026-02-19T23:47:35.457Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-02-19T23:47:35.457Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebasedataconnect.googleapis.com  x-goog-user-project=kpopvoting
+[debug] [2026-02-19T23:47:35.461Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-02-19T23:47:35.461Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/cloudfunctions.googleapis.com  x-goog-user-project=kpopvoting
+[debug] [2026-02-19T23:47:35.463Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseapphosting.googleapis.com [none]
+[debug] [2026-02-19T23:47:35.463Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseapphosting.googleapis.com  x-goog-user-project=kpopvoting
+[debug] [2026-02-19T23:47:35.465Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseio.com [none]
+[debug] [2026-02-19T23:47:35.465Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseio.com  x-goog-user-project=kpopvoting
+[debug] [2026-02-19T23:47:36.436Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-02-19T23:47:36.438Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-02-19T23:47:36.451Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/cloudfunctions.googleapis.com 200
+[debug] [2026-02-19T23:47:36.451Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2026-02-19T23:47:36.452Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseapphosting.googleapis.com 200
+[debug] [2026-02-19T23:47:36.452Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2026-02-19T23:47:36.481Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firestore.googleapis.com 200
+[debug] [2026-02-19T23:47:36.481Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firestore.googleapis.com [omitted]
+[debug] [2026-02-19T23:47:36.521Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/cloudfunctions.googleapis.com 200
+[debug] [2026-02-19T23:47:36.521Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2026-02-19T23:47:36.529Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-02-19T23:47:36.529Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-02-19T23:47:36.533Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseio.com 403
+[debug] [2026-02-19T23:47:36.533Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseio.com [omitted]
+[debug] [2026-02-19T23:47:36.551Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseapphosting.googleapis.com 200
+[debug] [2026-02-19T23:47:36.551Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2026-02-19T23:47:36.688Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firestore.googleapis.com 200
+[debug] [2026-02-19T23:47:36.688Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firestore.googleapis.com [omitted]
+[debug] [2026-02-19T23:47:36.703Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseio.com 403
+[debug] [2026-02-19T23:47:36.703Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/kpopvoting/services/firebaseio.com [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-02-19T23:47:36.713Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-02-19T23:47:36.714Z] > authorizing via signed-in user (lhycpa77@gmail.com)
+[debug] [2026-02-19T23:47:36.714Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:36.714Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:36.714Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo [none]
+[debug] [2026-02-19T23:47:37.115Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo 200
+[debug] [2026-02-19T23:47:37.115Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo {"name":"projects/kpopvoting/billingInfo","projectId":"kpopvoting","billingAccountName":"","billingEnabled":false}
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-02-19T23:47:37.122Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-02-19T23:47:37.122Z] > authorizing via signed-in user (lhycpa77@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-02-19T23:47:37.169Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-02-19T23:47:37.169Z] > authorizing via signed-in user (lhycpa77@gmail.com)
+[debug] [2026-02-19T23:47:37.169Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:37.169Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:37.170Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo [none]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-02-19T23:47:37.192Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-02-19T23:47:37.193Z] > authorizing via signed-in user (lhycpa77@gmail.com)
+[debug] [2026-02-19T23:47:37.193Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:37.193Z] Checked if tokens are valid: true, expires at: 1771548381886
+[debug] [2026-02-19T23:47:37.194Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo [none]
+[debug] [2026-02-19T23:47:37.605Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo 200
+[debug] [2026-02-19T23:47:37.606Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo {"name":"projects/kpopvoting/billingInfo","projectId":"kpopvoting","billingAccountName":"","billingEnabled":false}
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-02-19T23:47:37.608Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-02-19T23:47:37.609Z] > authorizing via signed-in user (lhycpa77@gmail.com)
+[debug] [2026-02-19T23:47:38.212Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo 200
+[debug] [2026-02-19T23:47:38.212Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/kpopvoting/billingInfo {"name":"projects/kpopvoting/billingInfo","projectId":"kpopvoting","billingAccountName":"","billingEnabled":false}
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2026-02-19T23:47:38.215Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-02-19T23:47:38.215Z] > authorizing via signed-in user (lhycpa77@gmail.com)
