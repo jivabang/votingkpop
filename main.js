@@ -65,7 +65,6 @@ const destinations = [
     { name: "아이슬란드", image: "https://images.unsplash.com/photo-1500049242043-3c080052b654?q=80&w=2070&auto=format&fit=crop", scores: { activity: 4, city: 2, relaxation: 2, nature: 5, budget: 5 } }
 ];
 
-
 const startScreen = document.getElementById('start-screen');
 const quizContainer = document.getElementById('quiz-container');
 const resultContainer = document.getElementById('result-container');
@@ -76,39 +75,33 @@ const userAnswers = [];
 
 function showQuestion(index) {
     const q = questions[index];
+    let buttonsHTML = '';
+    if (index > 0) {
+        buttonsHTML += '<button id="prev-btn">이전</button>';
+    }
+    buttonsHTML += '<button id="next-btn">다음</button>';
+
     quizContainer.innerHTML = `
         <div class="progress-bar">
-            <div class="progress" style="width: ${((index + 1) / questions.length) * 100}%"></div>
+            <div class="progress" style="width: ${((index) / questions.length) * 100}%"></div>
         </div>
         <div class="question">
             <p>${q.question}</p>
             <div class="options">
                 ${q.options.map((option, i) => `
                     <label>
-                        <input type="radio" name="question${index}" value="${i + 1}">
+                        <input type="radio" name="question${index}" value="${i + 1}" ${userAnswers[index] === i+1 ? 'checked' : ''}>
                         <span class="option-text">${option}</span>
                     </label>
                 `).join('')}
             </div>
         </div>
-        <button id="next-btn">다음</button>
+        <div class="navigation-buttons">
+            ${buttonsHTML}
+        </div>
     `;
 
     const nextBtn = document.getElementById('next-btn');
-    const options = quizContainer.querySelectorAll('.options label');
-
-    options.forEach(label => {
-        label.addEventListener('click', () => {
-            // Automatically move to next question after a brief delay
-            setTimeout(() => {
-                 const selected = quizContainer.querySelector(`input[name="question${index}"]:checked`);
-                if (selected) {
-                    handleNextQuestion(parseInt(selected.value));
-                }
-            }, 300);
-        });
-    });
-    
     nextBtn.addEventListener('click', () => {
         const selected = quizContainer.querySelector(`input[name="question${index}"]:checked`);
         if (selected) {
@@ -117,10 +110,19 @@ function showQuestion(index) {
             alert("답변을 선택해주세요!");
         }
     });
+
+    if (index > 0) {
+        const prevBtn = document.getElementById('prev-btn');
+        prevBtn.addEventListener('click', () => {
+            currentQuestionIndex--;
+            userAnswers.pop();
+            showQuestion(currentQuestionIndex);
+        });
+    }
 }
 
 function handleNextQuestion(selectedValue) {
-    userAnswers.push(selectedValue);
+    userAnswers[currentQuestionIndex] = selectedValue;
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
         showQuestion(currentQuestionIndex);
@@ -169,7 +171,7 @@ function calculateResult() {
         <h2>당신에게 추천하는 여행지는...</h2>
         <div class="result-card">
             <img src="${bestMatch.image}" alt="${bestMatch.name}" class="result-image">
-            <div class="result-name">${bestMatch.name}</div>
+            <div class="result-name-overlay">${bestMatch.name}</div>
         </div>
          <button id="retry-btn">다시하기</button>
     `;
