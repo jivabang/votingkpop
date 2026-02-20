@@ -2,52 +2,52 @@
 const questions = [
     {
         question: "1. 얼마나 활동적인 여행을 선호하시나요?",
-        options: ["1: 전혀 활동적이지 않음", "2: 별로", "3: 보통", "4: 좋음", "5: 매우 활동적임"],
+        options: ["전혀 활동적이지 않음", "별로", "보통", "좋음", "매우 활동적임"],
         category: "activity"
     },
     {
         question: "2. 여행지에서 휴양과 관광 중 무엇을 더 선호하시나요?",
-        options: ["1: 완전한 휴양", "2: 휴양 위주", "3: 반반", "4: 관광 위주", "5: 꽉 찬 관광"],
+        options: ["완전한 휴양", "휴양 위주", "반반", "관광 위주", "꽉 찬 관광"],
         category: "activity"
     },
     {
         question: "3. 도시의 화려함과 자연의 평온함 중 어떤 것을 더 선호하시나요?",
-        options: ["1: 자연의 평온함", "2: 자연 선호", "3: 둘 다 좋음", "4: 도시 선호", "5: 도시의 화려함"],
+        options: ["자연의 평온함", "자연 선호", "둘 다 좋음", "도시 선호", "도시의 화려함"],
         category: "city"
     },
     {
         question: "4. 여행 중 쇼핑을 얼마나 즐기시나요?",
-        options: ["1: 전혀 안 함", "2: 거의 안 함", "3: 가끔 함", "4: 즐김", "5: 매우 즐김"],
-_category: "city"
+        options: ["전혀 안 함", "거의 안 함", "가끔 함", "즐김", "매우 즐김"],
+        category: "city"
     },
     {
         question: "5. 역사 유적지나 박물관 방문을 얼마나 좋아하시나요?",
-        options: ["1: 전혀 안 좋아함", "2: 별로 안 좋아함", "3: 보통", "4: 좋아함", "5: 매우 좋아함"],
+        options: ["전혀 안 좋아함", "별로 안 좋아함", "보통", "좋아함", "매우 좋아함"],
         category: "city"
     },
     {
         question: "6. 조용한 해변에서 책을 읽는 것을 얼마나 선호하시나요?",
-        options: ["1: 전혀 선호하지 않음", "2: 별로", "3: 보통", "4: 선호함", "5: 매우 선호함"],
+        options: ["전혀 선호하지 않음", "별로", "보통", "선호함", "매우 선호함"],
         category: "relaxation"
     },
     {
         question: "7. 스파나 마사지를 받는 것을 얼마나 즐기시나요?",
-        options: ["1: 전혀 즐기지 않음", "2: 별로", "3: 보통", "4: 즐김", "5: 매우 즐김"],
+        options: ["전혀 즐기지 않음", "별로", "보통", "즐김", "매우 즐김"],
         category: "relaxation"
     },
     {
         question: "8. 숲 속이나 산책로를 걷는 것을 얼마나 좋아하시나요?",
-        options: ["1: 전혀 안 좋아함", "2: 별로", "3: 보통", "4: 좋아함", "5: 매우 좋아함"],
+        options: ["전혀 안 좋아함", "별로", "보통", "좋아함", "매우 좋아함"],
         category: "nature"
     },
     {
         question: "9. 야생동물을 관찰하는 것에 얼마나 관심이 있으신가요?",
-        options: ["1: 전혀 없음", "2: 별로 없음", "3: 보통", "4: 관심 있음", "5: 매우 많음"],
+        options: ["전혀 없음", "별로 없음", "보통", "관심 있음", "매우 많음"],
         category: "nature"
     },
     {
         question: "10. 여행 예산은 어느 정도로 생각하시나요?",
-        options: ["1: 매우 저렴하게", "2: 저렴하게", "3: 보통", "4: 여유롭게", "5: 매우 여유롭게"],
+        options: ["매우 저렴하게", "저렴하게", "보통", "여유롭게", "매우 여유롭게"],
         category: "budget"
     }
 ];
@@ -121,7 +121,9 @@ function calculateResult() {
 
     for (let i = 0; i < questions.length; i++) {
         const category = questions[i].category;
-        userScores[category] += userAnswers[i];
+        if (category) { // Ensure category exists
+            userScores[category] += userAnswers[i];
+        }
     }
 
     let bestMatch = null;
@@ -130,7 +132,9 @@ function calculateResult() {
     destinations.forEach(destination => {
         let difference = 0;
         for (const category in userScores) {
-            difference += Math.abs(userScores[category] - destination.scores[category]);
+            if (userScores.hasOwnProperty(category) && destination.scores.hasOwnProperty(category)) {
+                difference += Math.abs(userScores[category] - destination.scores[category]);
+            }
         }
         
         if (difference < minDifference) {
