@@ -2,52 +2,52 @@
 const questions = [
     {
         question: "1. 얼마나 활동적인 여행을 선호하시나요?",
-        options: ["1: 전혀 활동적이지 않음", "2", "3", "4", "5: 매우 활동적임"],
+        options: ["1: 전혀 활동적이지 않음", "2: 별로", "3: 보통", "4: 좋음", "5: 매우 활동적임"],
         category: "activity"
     },
     {
         question: "2. 여행지에서 휴양과 관광 중 무엇을 더 선호하시나요?",
-        options: ["1: 완전한 휴양", "2", "3", "4", "5: 꽉 찬 관광"],
+        options: ["1: 완전한 휴양", "2: 휴양 위주", "3: 반반", "4: 관광 위주", "5: 꽉 찬 관광"],
         category: "activity"
     },
     {
         question: "3. 도시의 화려함과 자연의 평온함 중 어떤 것을 더 선호하시나요?",
-        options: ["1: 자연의 평온함", "2", "3", "4", "5: 도시의 화려함"],
+        options: ["1: 자연의 평온함", "2: 자연 선호", "3: 둘 다 좋음", "4: 도시 선호", "5: 도시의 화려함"],
         category: "city"
     },
     {
         question: "4. 여행 중 쇼핑을 얼마나 즐기시나요?",
-        options: ["1: 전혀 안 함", "2", "3", "4", "5: 매우 즐김"],
-        category: "city"
+        options: ["1: 전혀 안 함", "2: 거의 안 함", "3: 가끔 함", "4: 즐김", "5: 매우 즐김"],
+_category: "city"
     },
     {
         question: "5. 역사 유적지나 박물관 방문을 얼마나 좋아하시나요?",
-        options: ["1: 전혀 안 좋아함", "2", "3", "4", "5: 매우 좋아함"],
+        options: ["1: 전혀 안 좋아함", "2: 별로 안 좋아함", "3: 보통", "4: 좋아함", "5: 매우 좋아함"],
         category: "city"
     },
     {
         question: "6. 조용한 해변에서 책을 읽는 것을 얼마나 선호하시나요?",
-        options: ["1: 전혀 선호하지 않음", "2", "3", "4", "5: 매우 선호함"],
+        options: ["1: 전혀 선호하지 않음", "2: 별로", "3: 보통", "4: 선호함", "5: 매우 선호함"],
         category: "relaxation"
     },
     {
         question: "7. 스파나 마사지를 받는 것을 얼마나 즐기시나요?",
-        options: ["1: 전혀 즐기지 않음", "2", "3", "4", "5: 매우 즐김"],
+        options: ["1: 전혀 즐기지 않음", "2: 별로", "3: 보통", "4: 즐김", "5: 매우 즐김"],
         category: "relaxation"
     },
     {
         question: "8. 숲 속이나 산책로를 걷는 것을 얼마나 좋아하시나요?",
-        options: ["1: 전혀 안 좋아함", "2", "3", "4", "5: 매우 좋아함"],
+        options: ["1: 전혀 안 좋아함", "2: 별로", "3: 보통", "4: 좋아함", "5: 매우 좋아함"],
         category: "nature"
     },
     {
         question: "9. 야생동물을 관찰하는 것에 얼마나 관심이 있으신가요?",
-        options: ["1: 전혀 없음", "2", "3", "4", "5: 매우 많음"],
+        options: ["1: 전혀 없음", "2: 별로 없음", "3: 보통", "4: 관심 있음", "5: 매우 많음"],
         category: "nature"
     },
     {
         question: "10. 여행 예산은 어느 정도로 생각하시나요?",
-        options: ["1: 매우 저렴하게", "2", "3", "4", "5: 매우 여유롭게"],
+        options: ["1: 매우 저렴하게", "2: 저렴하게", "3: 보통", "4: 여유롭게", "5: 매우 여유롭게"],
         category: "budget"
     }
 ];
@@ -65,38 +65,52 @@ const destinations = [
     { name: "아이슬란드", scores: { activity: 4, city: 2, relaxation: 2, nature: 5, budget: 5 } }
 ];
 
+const startScreen = document.getElementById('start-screen');
 const quizContainer = document.getElementById('quiz-container');
-const submitBtn = document.getElementById('submit-btn');
 const resultContainer = document.getElementById('result-container');
+const startBtn = document.getElementById('start-btn');
 
-function displayQuestions() {
-    questions.forEach((q, index) => {
-        const questionDiv = document.createElement('div');
-        questionDiv.classList.add('question');
-        questionDiv.innerHTML = `<p>${q.question}</p>`;
-        
-        const optionsDiv = document.createElement('div');
-        optionsDiv.classList.add('options');
-        
-        for (let i = 1; i <= 5; i++) {
-            const label = document.createElement('label');
-            const radio = document.createElement('input');
-            radio.type = 'radio';
-            radio.name = `question${index}`;
-            radio.value = i;
-            radio.required = true;
-            
-            label.appendChild(radio);
-            label.appendChild(document.createTextNode(i));
-            optionsDiv.appendChild(label);
+let currentQuestionIndex = 0;
+const userAnswers = [];
+
+function showQuestion(index) {
+    const q = questions[index];
+    quizContainer.innerHTML = `
+        <div class="question">
+            <p>${q.question}</p>
+            <div class="options">
+                ${q.options.map((option, i) => `
+                    <label>
+                        <input type="radio" name="question${index}" value="${i + 1}">
+                        ${option}
+                    </label>
+                `).join('')}
+            </div>
+        </div>
+        <button id="next-btn">다음</button>
+    `;
+
+    const nextBtn = document.getElementById('next-btn');
+    nextBtn.addEventListener('click', () => {
+        const selected = quizContainer.querySelector(`input[name="question${index}"]:checked`);
+        if (selected) {
+            userAnswers.push(parseInt(selected.value));
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                showQuestion(currentQuestionIndex);
+            } else {
+                calculateResult();
+            }
+        } else {
+            alert("답변을 선택해주세요!");
         }
-        
-        questionDiv.appendChild(optionsDiv);
-        quizContainer.appendChild(questionDiv);
     });
 }
 
 function calculateResult() {
+    quizContainer.style.display = 'none';
+    resultContainer.style.display = 'block';
+
     const userScores = {
         activity: 0,
         city: 0,
@@ -105,23 +119,9 @@ function calculateResult() {
         budget: 0
     };
 
-    const answerGroups = document.querySelectorAll('.options');
-    let allAnswered = true;
-
-    answerGroups.forEach((group, index) => {
-        const selected = group.querySelector(`input[name="question${index}"]:checked`);
-        if (selected) {
-            const score = parseInt(selected.value);
-            const category = questions[index].category;
-            userScores[category] += score;
-        } else {
-            allAnswered = false;
-        }
-    });
-
-    if (!allAnswered) {
-        alert("모든 질문에 답변해주세요!");
-        return;
+    for (let i = 0; i < questions.length; i++) {
+        const category = questions[i].category;
+        userScores[category] += userAnswers[i];
     }
 
     let bestMatch = null;
@@ -142,5 +142,8 @@ function calculateResult() {
     resultContainer.innerHTML = `<h2>추천 여행지: ${bestMatch.name}</h2>`;
 }
 
-displayQuestions();
-submitBtn.addEventListener('click', calculateResult);
+startBtn.addEventListener('click', () => {
+    startScreen.style.display = 'none';
+    quizContainer.style.display = 'block';
+    showQuestion(currentQuestionIndex);
+});
