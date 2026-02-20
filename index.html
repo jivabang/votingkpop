@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -20,7 +21,20 @@
             <!-- 결과가 동적으로 추가될 공간 -->
         </div>
     </div>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+
+    <script>
+        // Cache busting을 위해 스크립트 URL에 타임스탬프 추가
+        const version = new Date().getTime();
+        const dataScript = document.createElement('script');
+        dataScript.src = `data.js?v=${version}`;
+        document.body.appendChild(dataScript);
+
+        const mainScript = document.createElement('script');
+        // data.js가 로드된 후 main.js를 실행하도록 설정
+        dataScript.onload = function() {
+            mainScript.src = `main.js?v=${version}`;
+            document.body.appendChild(mainScript);
+        };
+    </script>
 </body>
 </html>
