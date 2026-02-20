@@ -311,22 +311,22 @@ function showQuestion(index) {
     // 이전 답변이 있으면 해당 버튼 스타일을 유지하기 위한 로직 추가
     const selectedValue = userAnswers[q.category];
 
-    quizContainer.innerHTML = \`
+    quizContainer.innerHTML = `
         <div class="progress-bar">
-            <div class="progress" style="width: \${((index) / questions.length) * 100}%"></div>
+            <div class="progress" style="width: ${((index) / questions.length) * 100}%"></div>
         </div>
         <div class="question">
-            <p>\${q.question}</p>
+            <p>${q.question}</p>
             <div class="options">
-                \${q.options.map((option, i) => \`
-                    <button class="option-btn \${selectedValue === (i + 1) ? 'selected' : ''}" data-value="\${i + 1}">\${option}</button>
-                \`).join('')}
+                ${q.options.map((option, i) => `
+                    <button class="option-btn ${selectedValue === (i + 1) ? 'selected' : ''}" data-value="${i + 1}">${option}</button>
+                `).join('')}
             </div>
         </div>
         <div class="navigation-buttons">
-            \${index > 0 ? '<button id="prev-btn">이전</button>' : ''}
+            ${index > 0 ? '<button id="prev-btn">이전</button>' : ''}
         </div>
-    \`;
+    `;
 
     const optionBtns = quizContainer.querySelectorAll('.option-btn');
     optionBtns.forEach(btn => {
@@ -384,22 +384,22 @@ function calculateResult() {
         }
     });
 
-    resultContainer.innerHTML = \`
+    resultContainer.innerHTML = `
         <h2>당신에게 추천하는 여행지는...</h2>
         <div class="result-card">
-            <img src="\${bestMatch.image}" alt="\${bestMatch.name}" class="result-image">
+            <img src="${bestMatch.image}" alt="${bestMatch.name}" class="result-image">
             <div class="result-name-overlay">
-                <div class="result-name">\${bestMatch.name}</div>
+                <div class="result-name">${bestMatch.name}</div>
             </div>
         </div>
         <div class="result-description">
-            <h3>\${bestMatch.name}</h3>
-            <p>\${bestMatch.description}</p>
-            <h4>추천 장소: \${bestMatch.locationName}</h4>
-            <p>\${bestMatch.locationInfo}</p>
+            <h3>${bestMatch.name}</h3>
+            <p>${bestMatch.description}</p>
+            <h4>추천 장소: ${bestMatch.locationName}</h4>
+            <p>${bestMatch.locationInfo}</p>
         </div>
          <button id="retry-btn">다시하기</button>
-    \`;
+    `;
 
     const retryBtn = document.getElementById('retry-btn');
     retryBtn.addEventListener('click', () => {
