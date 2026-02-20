@@ -53,16 +53,16 @@ const questions = [
 ];
 
 const destinations = [
-    { name: "파리, 프랑스", image: "https://images.unsplash.com/photo-1502602898657-3e91760c0341?q=80&w=2070&auto=format&fit=crop", scores: { activity: 4, city: 5, relaxation: 2, nature: 1, budget: 4 } },
-    { name: "발리, 인도네시아", image: "https://images.unsplash.com/photo-1573790387438-4da905039392?q=80&w=1925&auto=format&fit=crop", scores: { activity: 3, city: 2, relaxation: 5, nature: 4, budget: 3 } },
-    { name: "뉴욕, 미국", image: "https://images.unsplash.com/photo-1546436836-07a91091f160?q=80&w=2074&auto=format&fit=crop", scores: { activity: 5, city: 5, relaxation: 1, nature: 1, budget: 5 } },
-    { name: "스위스 인터라켄", image: "https://images.unsplash.com/photo-1534940428755-4157b8563914?q=80&w=1974&auto=format&fit=crop", scores: { activity: 5, city: 1, relaxation: 3, nature: 5, budget: 4 } },
-    { name: "교토, 일본", image: "https://images.unsplash.com/photo-1536514498073-50e69d93c2b7?q=80&w=2070&auto=format&fit=crop", scores: { activity: 3, city: 4, relaxation: 4, nature: 3, budget: 3 } },
-    { name: "보라카이, 필리핀", image: "https://images.unsplash.com/photo-1512718734264-95c10defa381?q=80&w=2070&auto=format&fit=crop", scores: { activity: 2, city: 1, relaxation: 5, nature: 3, budget: 2 } },
-    { name: "로마, 이탈리아", image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1996&auto=format&fit=crop", scores: { activity: 4, city: 5, relaxation: 2, nature: 1, budget: 4 } },
-    { name: "그랜드 캐니언, 미국", image: "https://images.unsplash.com/photo-1527333656c94-78e6c65f9de2?q=80&w=2070&auto=format&fit=crop", scores: { activity: 4, city: 1, relaxation: 2, nature: 5, budget: 3 } },
-    { name: "방콕, 태국", image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?q=80&w=1974&auto=format&fit=crop", scores: { activity: 4, city: 4, relaxation: 3, nature: 2, budget: 2 } },
-    { name: "아이슬란드", image: "https://images.unsplash.com/photo-1500049242043-3c080052b654?q=80&w=2070&auto=format&fit=crop", scores: { activity: 4, city: 2, relaxation: 2, nature: 5, budget: 5 } }
+    { name: "파리, 프랑스", locationName: "에펠탑", image: "https://images.unsplash.com/photo-1502602898657-3e91760c0341?q=80&w=2070&auto=format&fit=crop", scores: { activity: 4, city: 5, relaxation: 2, nature: 1, budget: 4 } },
+    { name: "발리, 인도네시아", locationName: "다이아몬드 해변", image: "https://images.unsplash.com/photo-1573790387438-4da905039392?q=80&w=1925&auto=format&fit=crop", scores: { activity: 3, city: 2, relaxation: 5, nature: 4, budget: 3 } },
+    { name: "뉴욕, 미국", locationName: "브루클린 브릿지", image: "https://images.unsplash.com/photo-1546436836-07a91091f160?q=80&w=2074&auto=format&fit=crop", scores: { activity: 5, city: 5, relaxation: 1, nature: 1, budget: 5 } },
+    { name: "스위스 인터라켄", locationName: "하더 쿨름", image: "https://images.unsplash.com/photo-1534940428755-4157b8563914?q=80&w=1974&auto=format&fit=crop", scores: { activity: 5, city: 1, relaxation: 3, nature: 5, budget: 4 } },
+    { name: "교토, 일본", locationName: "후시미 이나리 신사", image: "https://images.unsplash.com/photo-1536514498073-50e69d93c2b7?q=80&w=2070&auto=format&fit=crop", scores: { activity: 3, city: 4, relaxation: 4, nature: 3, budget: 3 } },
+    { name: "보라카이, 필리핀", locationName: "화이트 비치", image: "https://images.unsplash.com/photo-1512718734264-95c10defa381?q=80&w=2070&auto=format&fit=crop", scores: { activity: 2, city: 1, relaxation: 5, nature: 3, budget: 2 } },
+    { name: "로마, 이탈리아", locationName: "콜로세움", image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1996&auto=format&fit=crop", scores: { activity: 4, city: 5, relaxation: 2, nature: 1, budget: 4 } },
+    { name: "그랜드 캐니언, 미국", locationName: "매더 포인트", image: "https://images.unsplash.com/photo-1527333656c94-78e6c65f9de2?q=80&w=2070&auto=format&fit=crop", scores: { activity: 4, city: 1, relaxation: 2, nature: 5, budget: 3 } },
+    { name: "방콕, 태국", locationName: "왓 아룬", image: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?q=80&w=1974&auto=format&fit=crop", scores: { activity: 4, city: 4, relaxation: 3, nature: 2, budget: 2 } },
+    { name: "아이슬란드", locationName: "오로라", image: "https://images.unsplash.com/photo-1500049242043-3c080052b654?q=80&w=2070&auto=format&fit=crop", scores: { activity: 4, city: 2, relaxation: 2, nature: 5, budget: 5 } }
 ];
 
 const startScreen = document.getElementById('start-screen');
@@ -79,8 +79,7 @@ function showQuestion(index) {
     if (index > 0) {
         buttonsHTML += '<button id="prev-btn">이전</button>';
     }
-    buttonsHTML += '<button id="next-btn">다음</button>';
-
+    
     quizContainer.innerHTML = `
         <div class="progress-bar">
             <div class="progress" style="width: ${((index) / questions.length) * 100}%"></div>
@@ -101,21 +100,23 @@ function showQuestion(index) {
         </div>
     `;
 
-    const nextBtn = document.getElementById('next-btn');
-    nextBtn.addEventListener('click', () => {
-        const selected = quizContainer.querySelector(`input[name="question${index}"]:checked`);
-        if (selected) {
-            handleNextQuestion(parseInt(selected.value));
-        } else {
-            alert("답변을 선택해주세요!");
-        }
+    const options = quizContainer.querySelectorAll('.options label');
+    options.forEach(label => {
+        label.addEventListener('click', () => {
+            const selected = label.querySelector('input');
+            if (selected) {
+                // Add a slight delay to show the selection
+                setTimeout(() => {
+                    handleNextQuestion(parseInt(selected.value));
+                }, 300);
+            }
+        });
     });
 
     if (index > 0) {
         const prevBtn = document.getElementById('prev-btn');
         prevBtn.addEventListener('click', () => {
             currentQuestionIndex--;
-            userAnswers.pop();
             showQuestion(currentQuestionIndex);
         });
     }
@@ -171,7 +172,10 @@ function calculateResult() {
         <h2>당신에게 추천하는 여행지는...</h2>
         <div class="result-card">
             <img src="${bestMatch.image}" alt="${bestMatch.name}" class="result-image">
-            <div class="result-name-overlay">${bestMatch.name}</div>
+            <div class="result-name-overlay">
+                <div class="result-name">${bestMatch.name}</div>
+                <div class="result-location-name">${bestMatch.locationName}</div>
+            </div>
         </div>
          <button id="retry-btn">다시하기</button>
     `;
@@ -181,6 +185,7 @@ function calculateResult() {
         location.reload();
     });
 }
+
 
 startBtn.addEventListener('click', () => {
     startScreen.style.display = 'none';
