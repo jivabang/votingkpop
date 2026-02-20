@@ -68,34 +68,28 @@ h1 {
     flex-direction: column;
 }
 
-.options label {
+.option-btn {
     background-color: #f8f9fa;
+    color: #333;
     border: 1px solid #dee2e6;
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1rem;
     cursor: pointer;
     transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: left;
+    font-weight: 400;
 }
 
-.options label:hover {
+.option-btn:hover {
     background-color: #e9ecef;
     border-color: #adb5bd;
 }
 
-.options input[type="radio"] {
-    display: none;
-}
-
-.options input[type="radio"]:checked + .option-text {
-    color: #007bff;
-    font-weight: 700;
-}
-
-.option-text {
-    font-size: 1.1rem;
+.options .option-btn:last-child {
+    margin-bottom: 0;
 }
 
 .navigation-buttons {
@@ -114,6 +108,7 @@ button {
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 button:hover {
@@ -140,11 +135,13 @@ button:hover {
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     margin-bottom: 1.5rem;
+    height: 300px;
 }
 
 .result-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -155,12 +152,16 @@ button:hover {
     right: 0;
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 1.5rem;
-    font-size: 1.8rem;
+    padding: 1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
 }
 
+.result-description {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
 
 @media (max-width: 600px) {
     .container {
@@ -175,7 +176,7 @@ button:hover {
         font-size: 1.3rem;
     }
 
-    .option-text {
+    .option-btn {
         font-size: 1rem;
     }
 
