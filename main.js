@@ -140,7 +140,7 @@ const destinations = [
         locationName: "플라야 델피네스",
         description: "카리브해의 보석 칸쿤에서 에메랄드빛 바다를 보며 칵테일 한 잔의 여유를 즐겨보세요.",
         locationInfo: "아름다운 백사장과 'CANCUN' 조형물로 유명한 칸쿤의 대표적인 공공 해변입니다.",
-        image: "https://images.unsplash.com/photo-1582534484435-1263c914c45a?q=80&w=1974&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1590552516659-f14413158e38?q=80&w=1974&auto=format&fit=crop",
         scores: { pacing: 1, interest: 2, climate: 1, budget: 3, food: 2, activity: 2, companion: 2, art: 3, transport: 3, vibe: 2 }
     },
     {
