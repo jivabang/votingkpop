@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="img-src 'self' https://images.unsplash.com;">
     <title>여행지 추천 테스트</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,12 +10,17 @@
     <div class="container">
         <div id="start-screen">
             <h1>나에게 꼭 맞는 여행지는?</h1>
-            <p>10가지 질문에 답하고 나만의 여행지를 찾아보세요!</p>
-            <button id="start-btn">시작하기</button>
+            <p>10가지 질문으로 알아보는 나의 여행 취향</p>
+            <button id="start-btn" class="btn">시작하기</button>
         </div>
-        <div id="quiz-container" style="display: none;"></div>
-        <div id="result-container" style="display: none;"></div>
+        <div id="quiz-container" style="display: none;">
+            <!-- 질문이 동적으로 추가될 공간 -->
+        </div>
+        <div id="result-container" style="display: none;">
+            <!-- 결과가 동적으로 추가될 공간 -->
+        </div>
     </div>
+    <script src="data.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
