@@ -62,10 +62,10 @@ const destinations = [
     },
     { 
         name: "교토, 일본", 
-        locationName: "후시미 이나리 신사",
+        locationName: "기요미즈데라",
         description: "천년 고도 교토의 고즈넉한 신사와 전통 가옥 거리에서 일본의 아름다움을 느껴보세요.",
-        locationInfo: "수천 개의 붉은 토리이가 터널을 이루는 신비로운 풍경으로 유명한 신사입니다.",
-        image: "https://images.unsplash.com/photo-1536514498073-50e69d93c2b7?q=80&w=2070&auto=format&fit=crop", 
+        locationInfo: "언덕 위에 세워진 목조 사찰로, 교토 시내를 한눈에 조망할 수 있는 멋진 경치를 자랑합니다.",
+        image: "https://images.unsplash.com/photo-1525985223521-44161e2a829d?q=80&w=1974&auto=format&fit=crop", 
         scores: { activity: 2, city_nature: 3, adventure: 1, shopping_food: 2, budget: 2 } 
     }
 ];
